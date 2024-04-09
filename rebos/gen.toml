@@ -17,7 +17,8 @@ items = [
     "fzf",
     "chruby",
     "docker",
-    "ruby-install"
+    "ruby-install",
+    "postgresql-libs",
 ]
 
 # Packages to be installed via Flatpak.

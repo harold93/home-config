@@ -19,6 +19,7 @@ items = [
     "docker",
     "ruby-install",
     "postgresql-libs",
+    "tmux",
 ]
 
 # Packages to be installed via Flatpak.

@@ -17,9 +17,20 @@ items = [
     "fzf",
     "chruby",
     "docker",
+    "docker-compose",
     "ruby-install",
     "postgresql-libs",
     "tmux",
+    "slack-desktop-wayland",
+    "heroku-cli",
+    "ripgrep",
+    "lazygit",
+    "fd",
+    "git-delta",
+# "nodejs-lts-iron",
+    "nodejs",
+    "yarn",
+    "gparted",
 ]
 
 # Packages to be installed via Flatpak.

@@ -1,0 +1,106 @@
+blinking-cursor = true
+performance = "High"
+disable-unfocused-render = false
+use-fork = true
+use-kitty-keyboard-protocol = false
+line-height = 1.0
+theme = ""
+padding-x = 0.0
+cursor = "▇"
+scroll-multiplier = 3.0
+env-vars = []
+option-as-alt = "false"
+ignore-selection-foreground-color = false
+editor = 'nvim'
+hide-cursor-when-typing = false
+
+[navigation]
+# mode = "BottomTab"
+mode = "CollapsedTab"
+clickable = true
+use-current-path = true
+
+[window]
+width = 600
+height = 400
+mode = "Maximized"
+background-opacity = 0.9
+blur = true
+decorations = 'Disabled'
+
+[renderer]
+performance = "High"
+backend = 'Vulkan'
+disable-renderer-when-unfocused = true
+
+[keyboard]
+use-kitty-keyboard-protocol = true
+
+[shell]
+program = ""
+args = ["--login"]
+
+[fonts]
+size = 18.0
+family = "CaskaydiaCove Nerd Font Mono"
+extras = []
+
+[fonts.regular]
+family = "cascadiamono"
+weight = 400
+style = "normal"
+
+[fonts.bold]
+family = "cascadiamono"
+weight = 800
+style = "normal"
+
+[fonts.bold-italic]
+family = "cascadiamono"
+weight = 800
+style = "italic"
+
+[fonts.italic]
+family = "CaskaydiaCove Nerd Font Mono"
+weight = 400
+style = "italic"
+
+[developer]
+enable-fps-counter = true
+log-level = "ON"
+
+[bindings]
+keys = []
+
+[colors]
+background       = '#282A36'
+black            = '#44475A'
+blue             = '#BD93F9'
+cursor           = '#F8F8F2'
+cyan             = '#8BE9FD'
+foreground       = '#F8F8F2'
+green            = '#50fa7b'
+magenta          = '#FF79C6'
+red              = '#FF5555'
+tabs             = '#494c62'
+tabs-active      = '#6a6e8e'
+white            = '#F8F8F2'
+yellow           = '#F1FA8C'
+dim-black        = '#393C4b'
+dim-blue         = '#AE7BF8'
+dim-cyan         = '#69C3dE'
+dim-foreground   = '#dfdfd9'
+dim-green        = '#06572F'
+dim-magenta      = '#FF60BB'
+dim-red          = '#FF3C3C'
+dim-white        = '#EFEFE1'
+dim-yellow       = '#E6A003'
+light-black      = '#6272A4'
+light-blue       = '#D6ACFF'
+light-cyan       = '#A4FFFF'
+light-foreground = '#f8f8f1'
+light-green      = '#69FF94'
+light-magenta    = '#FF92DF'
+light-red        = '#FF6E6E'
+light-white      = '#FFFFFF'
+light-yellow     = '#FFFFA5'

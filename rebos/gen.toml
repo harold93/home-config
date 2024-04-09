@@ -31,7 +31,7 @@ items = [
     "nodejs",
     "yarn",
     "gparted",
-    "rubymine"
+    "jetbrains-toolbox"
 ]
 
 # Packages to be installed via Flatpak.

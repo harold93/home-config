@@ -15,6 +15,9 @@ items = [
     "zoxide",
     "bat",
     "fzf",
+    "chruby",
+    "docker",
+    "ruby-install"
 ]
 
 # Packages to be installed via Flatpak.

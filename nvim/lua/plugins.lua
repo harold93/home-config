@@ -6,6 +6,7 @@ return {
     dependencies = {
       "RRethy/nvim-treesitter-endwise",
       "windwp/nvim-ts-autotag",
+      -- 'David-Kunz/markid',
     },
     build = ":TSUpdate",
     config = function()
@@ -44,6 +45,7 @@ return {
           },
         },
         autotag = {enable = true},
+        -- markid = { enable = true },
       })
     end,
   },

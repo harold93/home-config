@@ -179,6 +179,8 @@ return {
 
     end
   },
+  -- highlight var under cursor
+  {"RRethy/vim-illuminate"},
   -- Text and Edition end
   -- ****************************************
 
@@ -557,6 +559,7 @@ return {
         vim.diagnostic.open_float,
         { desc = "show diagnostics in popup", noremap = true, silent = true }
       )
+      vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, {desc = "rename lsp", noremap = true, silent = true})
 
       -- Disabling annoying text lsp
       vim.lsp.handlers["textDocument/publishDiagnostics"] =

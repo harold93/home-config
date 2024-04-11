@@ -1,6 +1,6 @@
 # Set window root path. Default is `$session_root`.
 # Must be called before `new_window`.
-window_root "~/code/nix_config-nvim"
+window_root "~/code/seven/seven/nix_config-nvim"
 
 # Create new window. If no argument is given, window name will be based on
 # layout file name.

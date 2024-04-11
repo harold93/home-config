@@ -6,6 +6,7 @@ return {
     dependencies = {
       "RRethy/nvim-treesitter-endwise",
       "windwp/nvim-ts-autotag",
+      -- 'David-Kunz/markid',
     },
     build = ":TSUpdate",
     config = function()
@@ -44,6 +45,7 @@ return {
           },
         },
         autotag = {enable = true},
+        -- markid = { enable = true },
       })
     end,
   },
@@ -170,6 +172,15 @@ return {
         require("nvim-surround").setup({})
     end,
   },
+  {
+    "vim-scripts/BufOnly.vim",
+    config = function ()
+      vim.keymap.set('n', '<leader>bda', ':BufOnly<CR>', {desc = 'delete all buff but the current one'})
+
+    end
+  },
+  -- highlight var under cursor
+  {"RRethy/vim-illuminate"},
   -- Text and Edition end
   -- ****************************************
 
@@ -240,6 +251,7 @@ return {
       local builtin = require("telescope.builtin")
 
       vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "find in files" })
+      vim.keymap.set("v", "<leader>ff", "y<ESC>:Telescope find_files default_text=<c-r>0<CR>", { desc = "find in files with select" })
       vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "find in buffers" })
 
       vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "find in files" })
@@ -512,7 +524,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "solargraph", "jsonls", "hls", "volar" },
+        ensure_installed = { "lua_ls", "solargraph", "jsonls", "hls", "volar", "tsserver" },
       })
     end,
   },
@@ -527,6 +539,7 @@ return {
       lspconfig.jsonls.setup({})
       lspconfig.hls.setup({})
       lspconfig.volar.setup({})
+      lspconfig.tsserver.setup({})
 
       vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "go to def" })
@@ -546,6 +559,7 @@ return {
         vim.diagnostic.open_float,
         { desc = "show diagnostics in popup", noremap = true, silent = true }
       )
+      vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, {desc = "rename lsp", noremap = true, silent = true})
 
       -- Disabling annoying text lsp
       vim.lsp.handlers["textDocument/publishDiagnostics"] =

@@ -67,3 +67,8 @@ vim.keymap.set("v", "˚", ":m '<-2<CR>gv=gv", { desc = "move line up" })
 
 -- Open explorer
 vim.keymap.set("n", "<leader>e", ":Ex<CR>", { desc = "open explorer page" })
+
+-- scroll
+vim.keymap.set("n", "<C-d>", "25<C-d>", { desc = "scroll down reduced" })
+vim.keymap.set("n", "<C-u>", "25<C-u>", { desc = "scroll up reduced" })
+

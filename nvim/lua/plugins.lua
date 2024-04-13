@@ -349,6 +349,7 @@ return {
 	-- Dashbord
 	{
 		"goolord/alpha-nvim",
+		event = "VimEnter",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			local dashboard = require("alpha.themes.startify")
@@ -450,6 +451,23 @@ return {
 			}
 
 			require("alpha").setup(dashboard.config)
+
+			vim.api.nvim_create_autocmd("User", {
+				once = true,
+				pattern = "LazyVimStarted",
+				callback = function()
+					local stats = require("lazy").stats()
+					local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+					dashboard.section.header.val = "⚡ Neovim loaded "
+						.. stats.loaded
+						.. "/"
+						.. stats.count
+						.. " plugins in "
+						.. ms
+						.. "ms"
+					pcall(vim.cmd.AlphaRedraw)
+				end,
+			})
 		end,
 	},
 	-- To make rainbow index

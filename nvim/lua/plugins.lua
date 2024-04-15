@@ -310,14 +310,20 @@ return {
 			local ts = require("telescope")
 			local builtin = require("telescope.builtin")
 
-			vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "find in files" })
+			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "find in files" })
 			vim.keymap.set(
 				"v",
-				"<leader>ff",
+				"<leader>sf",
 				"y<ESC>:Telescope find_files default_text=<c-r>0<CR>",
 				{ desc = "find in files with select" }
 			)
-			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "find in buffers" })
+			vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "find in buffers" })
+			vim.keymap.set(
+				"v",
+				"<leader>sb",
+				"y<ESC>:Telescope buffers default_text=<c-r>0<CR>",
+				{ desc = "find in files with select" }
+			)
 
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "find in files" })
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "select mode find in files" })
@@ -325,8 +331,9 @@ return {
 				"v",
 				"<leader>sg",
 				"y<ESC>:Telescope live_grep default_text=<c-r>0<CR>",
-				{ desc = "paste in input selected" }
+				{ desc = "pase in input selected" }
 			)
+			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "resume old search" })
 
 			ts.setup({
 				defaults = {

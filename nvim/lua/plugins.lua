@@ -603,8 +603,13 @@ return {
 				red = "#ec5f67",
 			}
 
-			theme.normal.c.bg = "#0d0f18"
-			theme.normal.x.bg = "#0d0f18"
+      if vim.fn.has('macunix') then
+        theme.normal.c.bg = "#1a2c2a21"
+        theme.normal.x.bg = "#1a2c2a21"
+      else
+        theme.normal.c.bg = "#0d0f18"
+        theme.normal.x.bg = "#0d0f18"
+      end
 
 			local config = {
 				options = { theme = theme },

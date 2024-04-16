@@ -916,7 +916,7 @@ return {
     config = function ()
       -- require('vim-test').setup()
 
-      vim.keymap.set('n', '<leader>tt', '<cmd>TestNearest<CR>', {desc = 'run nearest test'})
+      vim.keymap.set('n', '<leader>te', '<cmd>TestNearest<CR>', {desc = 'run nearest test'})
       vim.keymap.set('n', '<leader>tf', '<cmd>TestFile<CR>', {desc = 'run current file test'})
       vim.keymap.set('n', '<leader>ta', '<cmd>TestSuite<CR>', {desc = 'runs the whole test suite'})
       vim.keymap.set('n', '<leader>tl', '<cmd>TestLast<CR>', {desc = 'run last test'})

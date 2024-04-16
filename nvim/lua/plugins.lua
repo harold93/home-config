@@ -246,6 +246,14 @@ return {
 			end)
 		end,
 	},
+	{
+		"Wansmer/treesj",
+		keys = { "<space>m", "<space>j", "<space>s" },
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		config = function()
+			require("treesj").setup()
+		end,
+	},
 	-- Text and Edition end
 	-- ****************************************
 
@@ -572,13 +580,79 @@ return {
 	-- Botton status bar
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = {
-			options = {
-				theme = "monokai-pro",
-			},
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+			"arkav/lualine-lsp-progress",
 		},
+		-- opts = {
+		-- 	options = {
+		-- 		theme = "monokai-pro",
+		-- 	},
+		-- },
+		config = function()
+			local theme = require("lualine.themes.monokai-pro")
+			local colors = {
+				yellow = "#ECBE7B",
+				cyan = "#008080",
+				darkblue = "#081633",
+				green = "#98be65",
+				orange = "#e69138",
+				violet = "#a9a1e1",
+				magenta = "#c678dd",
+				blue = "#51afef",
+				red = "#ec5f67",
+			}
+
+			theme.normal.c.bg = "#0d0f18"
+			theme.normal.x.bg = "#0d0f18"
+
+			local config = {
+				options = { theme = theme },
+				sections = {
+					lualine_c = {
+						{
+
+							"lsp_progress",
+							-- display_components = { "lsp_client_name", { "title", "percentage", "message" } },
+							colors = {
+								percentage = colors.yellow,
+								title = colors.yellow,
+								message = colors.yellow,
+								spinner = colors.yellow,
+								lsp_client_name = colors.orange,
+								use = true,
+							},
+							separators = {
+								component = " ",
+								progress = " | ",
+								message = {
+									pre = "(",
+									post = ")",
+									commenced = "In Progress",
+									completed = "Completed",
+								},
+								percentage = { pre = "", post = "%% " },
+								title = { pre = "", post = ": " },
+								lsp_client_name = { pre = "[", post = "]" },
+								spinner = { pre = "", post = "" },
+							},
+							display_components = { "lsp_client_name", "spinner", { "title", "percentage", "message" } },
+							timer = { progress_enddelay = 500, spinner = 1000, lsp_client_name_enddelay = 1000 },
+							spinner_symbols = { "🌑 ", "🌒 ", "🌓 ", "🌔 ", "🌕 ", "🌖 ", "🌗 ", "🌘 " },
+						},
+					},
+				},
+			}
+
+			require("lualine").setup(config)
+		end,
 	},
+	-- {
+	-- 	"j-hui/fidget.nvim",
+	-- 	config = function()
+	-- 		require("fidget").setup()
+	-- 	end,
+	-- },
 	-- {
 	--   "nvim-neo-tree/neo-tree.nvim",
 	--   branch = "v3.x",

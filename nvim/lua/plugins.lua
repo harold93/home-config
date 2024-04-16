@@ -908,6 +908,23 @@ return {
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 	},
+  {
+    'vim-test/vim-test',
+    dependencies = {
+      'preservim/vimux'
+    },
+    config = function ()
+      -- require('vim-test').setup()
+
+      vim.keymap.set('n', '<leader>tt', '<cmd>TestNearest<CR>', {desc = 'run nearest test'})
+      vim.keymap.set('n', '<leader>tf', '<cmd>TestFile<CR>', {desc = 'run current file test'})
+      vim.keymap.set('n', '<leader>ta', '<cmd>TestSuite<CR>', {desc = 'runs the whole test suite'})
+      vim.keymap.set('n', '<leader>tl', '<cmd>TestLast<CR>', {desc = 'run last test'})
+      vim.keymap.set('n', '<leader>tg', '<cmd>TestVisit<CR>', {desc = 'run go to the last file tested'})
+
+      vim.cmd('let test#strategy = "vimux"')
+    end
+  },
 	-- Neovim and external bins end
 	-- ****************************************
 

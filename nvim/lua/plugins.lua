@@ -701,9 +701,20 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = { "williamboman/mason-lspconfig.nvim" },
+		dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+      'nvimdev/lspsaga.nvim'
+    },
 		config = function()
 			local lspconfig = require("lspconfig")
+      require('lspsaga').setup({
+        breadcrumb = {
+          enable = true,
+        },
+        outline = {
+          win_width = 45,
+        },
+      })
 
 			lspconfig.lua_ls.setup({})
 			lspconfig.solargraph.setup({})
@@ -714,10 +725,12 @@ return {
 
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "go to def" })
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "show info" })
+			-- vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "show info" })
+			vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "show info" })
 			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "show implementation" })
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "show ref" })
-			vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, { desc = "see code action" })
+			-- vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, { desc = "see code action" })
+			vim.keymap.set({ "n", "v" }, "<space>ca", "<cmd>Lspsaga code_action<CR>", { desc = "see code action" })
 			vim.keymap.set(
 				"n",
 				"<leader>cd",
@@ -736,6 +749,8 @@ return {
 				vim.lsp.buf.rename,
 				{ desc = "rename lsp", noremap = true, silent = true }
 			)
+			vim.keymap.set("n", "<leader>co", "<cmd>Lspsaga outline<CR>", { desc = "show structure of current file" })
+			vim.keymap.set("n", "<leader>ss", "<cmd>Lspsaga finder<CR>", { desc = "search symbols" })
 
 			-- Disabling annoying text lsp
 			vim.lsp.handlers["textDocument/publishDiagnostics"] =

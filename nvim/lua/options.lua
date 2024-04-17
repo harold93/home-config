@@ -25,7 +25,7 @@ vim.cmd("set ignorecase")
 vim.cmd("set smartcase")
 
 -- Nvim opt
-vim.opt.winbar = "%=%m %f"
+-- vim.opt.winbar = "%=%m %f" -- Commenting because clashing with lspsaga breadcrum
 vim.opt.signcolumn = 'yes:2'
 
 -- Enable 24-bit colorcolor

@@ -72,3 +72,12 @@ vim.keymap.set("n", "<leader>e", ":Ex<CR>", { desc = "open explorer page" })
 vim.keymap.set("n", "<C-d>", "25<C-d>", { desc = "scroll down reduced" })
 vim.keymap.set("n", "<C-u>", "25<C-u>", { desc = "scroll up reduced" })
 
+
+-- neovide config
+if vim.g.neovide then
+  vim.g.neovide_transparency = 0.9
+  vim.g.neovide_window_blurred = true
+  vim.g.neovide_input_macos_alt_is_meta = true
+  vim.g.neovide_profiler = false
+end
+

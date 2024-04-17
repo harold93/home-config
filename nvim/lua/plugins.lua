@@ -613,40 +613,41 @@ return {
 
 			local config = {
 				options = { theme = theme },
-				--				sections = {
-				--					lualine_c = {
-				--						{
-				--
-				--							"lsp_progress",
-				--							-- display_components = { "lsp_client_name", { "title", "percentage", "message" } },
-				--							colors = {
-				--								percentage = colors.yellow,
-				--								title = colors.yellow,
-				--								message = colors.yellow,
-				--								spinner = colors.yellow,
-				--								lsp_client_name = colors.orange,
-				--								use = true,
-				--							},
-				--							separators = {
-				--								component = " ",
-				--								progress = " | ",
-				--								message = {
-				--									pre = "(",
-				--									post = ")",
-				--									commenced = "In Progress",
-				--									completed = "Completed",
-				--								},
-				--								percentage = { pre = "", post = "%% " },
-				--								title = { pre = "", post = ": " },
-				--								lsp_client_name = { pre = "[", post = "]" },
-				--								spinner = { pre = "", post = "" },
-				--							},
-				--							display_components = { "lsp_client_name", "spinner", { "title", "percentage", "message" } },
-				--							timer = { progress_enddelay = 500, spinner = 1000, lsp_client_name_enddelay = 1000 },
-				--							spinner_symbols = { "🌑 ", "🌒 ", "🌓 ", "🌔 ", "🌕 ", "🌖 ", "🌗 ", "🌘 " },
-				--						},
-				--					},
-				--				},
+				sections = {
+					lualine_c = {
+						{ "filename", path = 1 },
+						--						{
+						--
+						--							"lsp_progress",
+						--							-- display_components = { "lsp_client_name", { "title", "percentage", "message" } },
+						--							colors = {
+						--								percentage = colors.yellow,
+						--								title = colors.yellow,
+						--								message = colors.yellow,
+						--								spinner = colors.yellow,
+						--								lsp_client_name = colors.orange,
+						--								use = true,
+						--							},
+						--							separators = {
+						--								component = " ",
+						--								progress = " | ",
+						--								message = {
+						--									pre = "(",
+						--									post = ")",
+						--									commenced = "In Progress",
+						--									completed = "Completed",
+						--								},
+						--								percentage = { pre = "", post = "%% " },
+						--								title = { pre = "", post = ": " },
+						--								lsp_client_name = { pre = "[", post = "]" },
+						--								spinner = { pre = "", post = "" },
+						--							},
+						--							display_components = { "lsp_client_name", "spinner", { "title", "percentage", "message" } },
+						--							timer = { progress_enddelay = 500, spinner = 1000, lsp_client_name_enddelay = 1000 },
+						--							spinner_symbols = { "🌑 ", "🌒 ", "🌓 ", "🌔 ", "🌕 ", "🌖 ", "🌗 ", "🌘 " },
+						--						},
+					},
+				},
 			}
 
 			require("lualine").setup(config)

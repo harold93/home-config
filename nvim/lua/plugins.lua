@@ -582,7 +582,7 @@ return {
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
-			"arkav/lualine-lsp-progress",
+			-- "arkav/lualine-lsp-progress",
 		},
 		-- opts = {
 		-- 	options = {
@@ -603,61 +603,61 @@ return {
 				red = "#ec5f67",
 			}
 
-      if vim.fn.has('macunix') then
-        theme.normal.c.bg = "#1a2c2a21"
-        theme.normal.x.bg = "#1a2c2a21"
-      else
-        theme.normal.c.bg = "#0d0f18"
-        theme.normal.x.bg = "#0d0f18"
-      end
+			if vim.fn.has("macunix") then
+				theme.normal.c.bg = "#1a2c2a21"
+				theme.normal.x.bg = "#1a2c2a21"
+			else
+				theme.normal.c.bg = "#0d0f18"
+				theme.normal.x.bg = "#0d0f18"
+			end
 
 			local config = {
 				options = { theme = theme },
-				sections = {
-					lualine_c = {
-						{
-
-							"lsp_progress",
-							-- display_components = { "lsp_client_name", { "title", "percentage", "message" } },
-							colors = {
-								percentage = colors.yellow,
-								title = colors.yellow,
-								message = colors.yellow,
-								spinner = colors.yellow,
-								lsp_client_name = colors.orange,
-								use = true,
-							},
-							separators = {
-								component = " ",
-								progress = " | ",
-								message = {
-									pre = "(",
-									post = ")",
-									commenced = "In Progress",
-									completed = "Completed",
-								},
-								percentage = { pre = "", post = "%% " },
-								title = { pre = "", post = ": " },
-								lsp_client_name = { pre = "[", post = "]" },
-								spinner = { pre = "", post = "" },
-							},
-							display_components = { "lsp_client_name", "spinner", { "title", "percentage", "message" } },
-							timer = { progress_enddelay = 500, spinner = 1000, lsp_client_name_enddelay = 1000 },
-							spinner_symbols = { "🌑 ", "🌒 ", "🌓 ", "🌔 ", "🌕 ", "🌖 ", "🌗 ", "🌘 " },
-						},
-					},
-				},
+				--				sections = {
+				--					lualine_c = {
+				--						{
+				--
+				--							"lsp_progress",
+				--							-- display_components = { "lsp_client_name", { "title", "percentage", "message" } },
+				--							colors = {
+				--								percentage = colors.yellow,
+				--								title = colors.yellow,
+				--								message = colors.yellow,
+				--								spinner = colors.yellow,
+				--								lsp_client_name = colors.orange,
+				--								use = true,
+				--							},
+				--							separators = {
+				--								component = " ",
+				--								progress = " | ",
+				--								message = {
+				--									pre = "(",
+				--									post = ")",
+				--									commenced = "In Progress",
+				--									completed = "Completed",
+				--								},
+				--								percentage = { pre = "", post = "%% " },
+				--								title = { pre = "", post = ": " },
+				--								lsp_client_name = { pre = "[", post = "]" },
+				--								spinner = { pre = "", post = "" },
+				--							},
+				--							display_components = { "lsp_client_name", "spinner", { "title", "percentage", "message" } },
+				--							timer = { progress_enddelay = 500, spinner = 1000, lsp_client_name_enddelay = 1000 },
+				--							spinner_symbols = { "🌑 ", "🌒 ", "🌓 ", "🌔 ", "🌕 ", "🌖 ", "🌗 ", "🌘 " },
+				--						},
+				--					},
+				--				},
 			}
 
 			require("lualine").setup(config)
 		end,
 	},
-	-- {
-	-- 	"j-hui/fidget.nvim",
-	-- 	config = function()
-	-- 		require("fidget").setup()
-	-- 	end,
-	-- },
+	{
+		"j-hui/fidget.nvim",
+		config = function()
+			require("fidget").setup({})
+		end,
+	},
 	-- {
 	--   "nvim-neo-tree/neo-tree.nvim",
 	--   branch = "v3.x",
@@ -702,19 +702,19 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-      'nvimdev/lspsaga.nvim'
-    },
+			"williamboman/mason-lspconfig.nvim",
+			"nvimdev/lspsaga.nvim",
+		},
 		config = function()
 			local lspconfig = require("lspconfig")
-      require('lspsaga').setup({
-        breadcrumb = {
-          enable = true,
-        },
-        outline = {
-          win_width = 45,
-        },
-      })
+			require("lspsaga").setup({
+				breadcrumb = {
+					enable = true,
+				},
+				outline = {
+					win_width = 45,
+				},
+			})
 
 			lspconfig.lua_ls.setup({})
 			lspconfig.solargraph.setup({})
@@ -923,23 +923,23 @@ return {
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 	},
-  {
-    'vim-test/vim-test',
-    dependencies = {
-      'preservim/vimux'
-    },
-    config = function ()
-      -- require('vim-test').setup()
+	{
+		"vim-test/vim-test",
+		dependencies = {
+			"preservim/vimux",
+		},
+		config = function()
+			-- require('vim-test').setup()
 
-      vim.keymap.set('n', '<leader>te', '<cmd>TestNearest<CR>', {desc = 'run nearest test'})
-      vim.keymap.set('n', '<leader>tf', '<cmd>TestFile<CR>', {desc = 'run current file test'})
-      vim.keymap.set('n', '<leader>ta', '<cmd>TestSuite<CR>', {desc = 'runs the whole test suite'})
-      vim.keymap.set('n', '<leader>tl', '<cmd>TestLast<CR>', {desc = 'run last test'})
-      vim.keymap.set('n', '<leader>tg', '<cmd>TestVisit<CR>', {desc = 'run go to the last file tested'})
+			vim.keymap.set("n", "<leader>te", "<cmd>TestNearest<CR>", { desc = "run nearest test" })
+			vim.keymap.set("n", "<leader>tf", "<cmd>TestFile<CR>", { desc = "run current file test" })
+			vim.keymap.set("n", "<leader>ta", "<cmd>TestSuite<CR>", { desc = "runs the whole test suite" })
+			vim.keymap.set("n", "<leader>tl", "<cmd>TestLast<CR>", { desc = "run last test" })
+			vim.keymap.set("n", "<leader>tg", "<cmd>TestVisit<CR>", { desc = "run go to the last file tested" })
 
-      vim.cmd('let test#strategy = "vimux"')
-    end
-  },
+			vim.cmd('let test#strategy = "vimux"')
+		end,
+	},
 	-- Neovim and external bins end
 	-- ****************************************
 

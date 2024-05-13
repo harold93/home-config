@@ -39,6 +39,7 @@ set number
 set relativenumber
 set cursorline
 set hlsearch
+set incsearch
 
 " space instead of tabs
 set expandtab
@@ -106,7 +107,21 @@ nnoremap <leader>cr :action RenameElement<CR>
 nnoremap <leader>cf :action ReformatCode<CR>
 nnoremap <leader>cR :action Refactorings.QuickListPopupAction<CR>
 
-nnoremap <leader>bda :bd|e#<CR>
+nnoremap <leader>bda :action CloseAllEditors<CR>
+
+
+" bookmarks
+nnoremap <leader>ha :action ToggleBookmark<CR>
+nnoremap <leader>hl :action ShowBookmarks<CR>
+" doesn't work
+nnoremap <A-1> :action GotoBookmark0<CR>
+nnoremap <A-2> :action GotoBookmark1<CR>
+nnoremap <A-3> :action GotoBookmark2<CR>
+nnoremap <A-4> :action GotoBookmark3<CR>
+
+" files
+nnoremap <leader>fr :action RecentFiles<CR>
+
 
 " improving % feature
 Plug 'vim-matchit'
@@ -128,7 +143,3 @@ Plug 'kana/vim-textobj-entire'
 
 " filesystem
 Plug 'preservim/nerdtree'
-
-
-
-

@@ -33,6 +33,7 @@ items = [
     "gparted",
     "jetbrains-toolbox",
     "ghcup-hs-bin",
+    "google-chrome"
 ]
 
 # Packages to be installed via Flatpak.

@@ -36,6 +36,7 @@ items = [
     "google-chrome",
     "ngrok",
     "android-studio",
+    "flutter"
 ]
 
 # Packages to be installed via Flatpak.

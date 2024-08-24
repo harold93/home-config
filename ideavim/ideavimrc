@@ -87,8 +87,8 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
 
-nnoremap <C-d> 25<C-d>
-nnoremap <C-u> 25<C-u>
+nnoremap <C-d> 20<C-d>
+nnoremap <C-u> 20<C-u>
 
 nnoremap <leader>e :NERDTreeToggle<CR>
 
@@ -143,3 +143,7 @@ Plug 'kana/vim-textobj-entire'
 
 " filesystem
 Plug 'preservim/nerdtree'
+
+" testing quickscope
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']

@@ -37,7 +37,8 @@ items = [
     "ngrok",
     "android-studio",
     "flutter",
-  "nmap"
+  "nmap",
+  "btop",
 ]
 
 # Packages to be installed via Flatpak.

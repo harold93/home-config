@@ -74,6 +74,9 @@ xnoremap L $
 nnoremap Q @qj<CR>
 xnoremap Q :norm @q<CR>
 
+nnoremap <C-c> <Esc>
+xnoremap <C-c> <Esc>
+
 " tab
 nnoremap <leader>tt :action EditSourceInNewWindow<CR>
 nnoremap <leader>tn :action PreviousWindow<CR>

@@ -39,6 +39,7 @@ items = [
     "flutter",
   "nmap",
   "btop",
+  "stow"
 ]
 
 # Packages to be installed via Flatpak.

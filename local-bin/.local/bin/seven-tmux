@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+tmuxifier load-session booklet &
+tmuxifier load-session studio  &
+tmuxifier load-session aleph_mobile &

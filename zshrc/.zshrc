@@ -89,6 +89,7 @@ alias mkdir='mkdir -p'
 # Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
 alias ssh='kitten ssh'
 
+### VAR ENV ###
 # conf tmuxifier
 export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux-layouts"
 # def editor
@@ -97,13 +98,28 @@ export EDITOR='nvim'
 export NPM_TIPTAP_AUTH_TOKEN='JBRkT3z5LeJlpVWcBy7t48PKVoACO3rGUwLxHJeAomePenTK9U/tr9Vd0ytDddNLuCl91ZSp82CPD1hYX/9C1A=='
 # for flutter
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
-
+# to avoid arch linux kernel 6.9.2-arch1-1 fail with yarn && node
+export UV_USE_IO_URING=0
+###############
 
 export TMUXIFIER_BIN="$HOME/.tmuxifier/bin"
 export CARGO_BIN='/home/harold/.cargo/bin'
 export LOCAL_BIN='/home/harold/.local/bin'
 export FLUTTER_PUB="$HOME/.pub-cache/bin"
 export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$PATH"
+
+## NVIM CONFS
+alias v='nvim' # default Neovim config
+alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
+alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
+alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
+alias vl='NVIM_APPNAME=nvim-lunarvim nvim' # LunarVim
+vv() {
+  select config in lazyvim kickstart nvchad astrovim lunarvim
+  do NVIM_APPNAME=nvim-$config nvim $@; break; done
+}
+##
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

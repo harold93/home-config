@@ -138,8 +138,8 @@ nmap <leader>3 :action GotoHarpoon3<cr>
 nmap <leader>4 :action GotoHarpoon4<cr>
 nmap <leader>5 :action GotoHarpoon5<cr>
 
-nmap <leader>H :action ShowHarpoon<cr>
-nmap <leader>h :action AddToHarpoon<cr>
+nmap <leader>h :action ShowHarpoon<cr>
+nmap <leader>H :action AddToHarpoon<cr>
 
 " improving % feature
 Plug 'vim-matchit'

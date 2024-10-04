@@ -117,10 +117,10 @@ nnoremap <leader>bda :action CloseAllEditors<CR>
 nnoremap <leader>ba :action ToggleBookmark<CR>
 nnoremap <leader>bl :action ShowBookmarks<CR>
 " doesn't work
-nnoremap <A-1> :action GotoBookmark0<CR>
-nnoremap <A-2> :action GotoBookmark1<CR>
-nnoremap <A-3> :action GotoBookmark2<CR>
-nnoremap <A-4> :action GotoBookmark3<CR>
+" nnoremap <A-1> :action GotoBookmark0<CR>
+" nnoremap <A-2> :action GotoBookmark1<CR>
+" nnoremap <A-3> :action GotoBookmark2<CR>
+" nnoremap <A-4> :action GotoBookmark3<CR>
 
 " files
 nnoremap <leader>fr :action RecentFiles<CR>
@@ -132,14 +132,14 @@ nmap <leader>h3 :action SetHarpoon3<cr>
 nmap <leader>h4 :action SetHarpoon4<cr>
 nmap <leader>h5 :action SetHarpoon5<cr>
 
-nmap <A-1> :action GotoHarpoon1<cr>
-nmap <A-2> :action GotoHarpoon2<cr>
-nmap <A-3> :action GotoHarpoon3<cr>
-nmap <A-4> :action GotoHarpoon4<cr>
-nmap <A-5> :action GotoHarpoon5<cr>
+nmap <leader>1 :action GotoHarpoon1<cr>
+nmap <leader>2 :action GotoHarpoon2<cr>
+nmap <leader>3 :action GotoHarpoon3<cr>
+nmap <leader>4 :action GotoHarpoon4<cr>
+nmap <leader>5 :action GotoHarpoon5<cr>
 
-nmap <leader>hh :action ShowHarpoon<cr>
-nmap <leader>ha :action AddToHarpoon<cr>
+nmap <leader>H :action ShowHarpoon<cr>
+nmap <leader>h :action AddToHarpoon<cr>
 
 " improving % feature
 Plug 'vim-matchit'

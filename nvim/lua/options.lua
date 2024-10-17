@@ -31,17 +31,16 @@ vim.cmd("set smartcase")
 -- Enable 24-bit colorcolor
 vim.opt.termguicolors = true
 
-
 -- Personal Keymaps
 -- ****************
-vim.keymap.set({"n", "v"}, "H", '^', { desc = "go to the begining of the line" })
-vim.keymap.set({"n", "v"}, "L", '$', { desc = "go to the begining of the line" })
+vim.keymap.set({ "n", "v" }, "H", "^", { desc = "go to the begining of the line" })
+vim.keymap.set({ "n", "v" }, "L", "$", { desc = "go to the begining of the line" })
 vim.keymap.set("v", "<leader>p", '"_dP', { desc = "keep content in register after paste" })
 -- silly remap lol
 vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "remap of escape" })
 
-vim.keymap.set('n', 'Q', '@qj', {desc = 'Q => @qj' })
-vim.keymap.set('x', 'Q', ':norm @q<CR>', {desc = 'selector mode Q => @qj' })
+vim.keymap.set("n", "Q", "@q", { desc = "Q => @q" })
+vim.keymap.set("x", "Q", ":norm @q<CR>", { desc = "selector mode Q => @q<CR>" })
 
 -- Commenting because of vim-tmux-navigator
 -- vim.keymap.set('n', '<C-h>', '<C-w>h', {desc = 'move between windows' })
@@ -49,10 +48,10 @@ vim.keymap.set('x', 'Q', ':norm @q<CR>', {desc = 'selector mode Q => @qj' })
 -- vim.keymap.set('n', '<C-k>', '<C-w>k', {desc = 'move between windows' })
 -- vim.keymap.set('n', '<C-l>', '<C-w>l', {desc = 'move between windows' })
 
-vim.keymap.set('n', '<leader>tt', ':tabnew<CR>', {desc = 'open new tab'})
-vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', {desc = 'close new tab'})
-vim.keymap.set('n', '<leader>tn', ':tabp<CR>', {desc = 'go to prev tab'})
-vim.keymap.set('n', '<leader>tp', ':tabn<CR>', {desc = 'go to next tab'})
+vim.keymap.set("n", "<leader>tt", ":tabnew<CR>", { desc = "open new tab" })
+vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { desc = "close new tab" })
+vim.keymap.set("n", "<leader>tn", ":tabp<CR>", { desc = "go to prev tab" })
+vim.keymap.set("n", "<leader>tp", ":tabn<CR>", { desc = "go to next tab" })
 
 -- Move selected lines
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "move line down" })
@@ -72,12 +71,10 @@ vim.keymap.set("n", "<leader>e", ":Ex<CR>", { desc = "open explorer page" })
 vim.keymap.set("n", "<C-d>", "25<C-d>", { desc = "scroll down reduced" })
 vim.keymap.set("n", "<C-u>", "25<C-u>", { desc = "scroll up reduced" })
 
-
 -- neovide config
 if vim.g.neovide then
-  vim.g.neovide_transparency = 0.9
-  vim.g.neovide_window_blurred = true
-  vim.g.neovide_input_macos_alt_is_meta = true
-  vim.g.neovide_profiler = false
+	vim.g.neovide_transparency = 0.9
+	vim.g.neovide_window_blurred = true
+	vim.g.neovide_input_macos_alt_is_meta = true
+	vim.g.neovide_profiler = false
 end
-

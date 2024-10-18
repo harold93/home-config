@@ -322,10 +322,10 @@ return {
 			local ts = require("telescope")
 			local builtin = require("telescope.builtin")
 
-			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "find in files" })
+			vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "find in files" })
 			vim.keymap.set(
 				"v",
-				"<leader>sf",
+				"<leader>ff",
 				"y<ESC>:Telescope find_files default_text=<c-r>0<CR>",
 				{ desc = "find in files with select" }
 			)

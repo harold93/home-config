@@ -71,7 +71,7 @@ xnoremap H ^
 xnoremap L $
 
 
-nnoremap Q @qj<CR>
+nnoremap Q @q<CR>
 xnoremap Q :norm @q<CR>
 
 nnoremap <C-c> <Esc>

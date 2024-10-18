@@ -659,29 +659,30 @@ return {
 			require("fidget").setup({})
 		end,
 	},
-  {
-    "luukvbaal/statuscol.nvim", config = function()
-      -- local builtin = require("statuscol.builtin")
-      require("statuscol").setup({
-        -- configuration goes here, for example:
-        -- relculright = true,
-        -- segments = {
-        --   { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
-        --   {
-        --     sign = { name = { "Diagnostic" }, maxwidth = 2, auto = true },
-        --     click = "v:lua.ScSa"
-        --   },
-        --   { text = { builtin.lnumfunc }, click = "v:lua.ScLa", },
-        --   {
-        --     sign = { name = { ".*" }, maxwidth = 2, colwidth = 1, auto = true, wrap = true },
-        --     click = "v:lua.ScSa"
-        --   },
-        -- }
-      })
-    end,
-  },
-  -- {
-  --   "nvim-neo-tree/neo-tree.nvim",
+	{
+		"luukvbaal/statuscol.nvim",
+		config = function()
+			-- local builtin = require("statuscol.builtin")
+			require("statuscol").setup({
+				-- configuration goes here, for example:
+				-- relculright = true,
+				-- segments = {
+				--   { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
+				--   {
+				--     sign = { name = { "Diagnostic" }, maxwidth = 2, auto = true },
+				--     click = "v:lua.ScSa"
+				--   },
+				--   { text = { builtin.lnumfunc }, click = "v:lua.ScLa", },
+				--   {
+				--     sign = { name = { ".*" }, maxwidth = 2, colwidth = 1, auto = true, wrap = true },
+				--     click = "v:lua.ScSa"
+				--   },
+				-- }
+			})
+		end,
+	},
+	-- {
+	--   "nvim-neo-tree/neo-tree.nvim",
 	--   branch = "v3.x",
 	--   dependencies = {
 	--     "nvim-lua/plenary.nvim",
@@ -783,12 +784,12 @@ return {
 					update_in_insert = true,
 				})
 
-      local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+			local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
 
-      for type, icon in pairs(signs) do
-        local hl = "DiagnosticSign" .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-      end
+			for type, icon in pairs(signs) do
+				local hl = "DiagnosticSign" .. type
+				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+			end
 		end,
 	},
 	{
@@ -993,20 +994,20 @@ return {
 					--    { desc = "toggle git blame" }
 					--  )
 
-					local gs = package.loaded.gitsigns
-
-					local function map(mode, l, r, opts)
-						opts = opts or {}
-						opts.buffer = bufnr
-						vim.keymap.set(mode, l, r, opts)
-					end
-
-					map("n", "<leader>gh", gs.preview_hunk, { desc = "preview hunk" })
-					map("n", "<leader>gb", gs.toggle_current_line_blame, { desc = { "git blame current line" } })
-					map("n", "<leader>grh", gs.reset_hunk, { desc = "reset hunk" })
-					map("v", "<leader>grh", function()
-						gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
-					end, { desc = "reset hunk" })
+					-- local gs = package.loaded.gitsigns
+					--
+					-- local function map(mode, l, r, opts)
+					-- 	opts = opts or {}
+					-- 	opts.buffer = bufnr
+					-- 	vim.keymap.set(mode, l, r, opts)
+					-- end
+					--
+					-- map("n", "<leader>gh", gs.preview_hunk, { desc = "preview hunk" })
+					-- map("n", "<leader>gb", gs.toggle_current_line_blame, { desc = { "git blame current line" } })
+					-- map("n", "<leader>grh", gs.reset_hunk, { desc = "reset hunk" })
+					-- map("v", "<leader>grh", function()
+					-- 	gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+					-- end, { desc = "reset hunk" })
 				end,
 			})
 		end,

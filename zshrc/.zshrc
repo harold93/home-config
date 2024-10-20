@@ -106,7 +106,8 @@ export TMUXIFIER_BIN="$HOME/.tmuxifier/bin"
 export CARGO_BIN='/home/harold/.cargo/bin'
 export LOCAL_BIN='/home/harold/.local/bin'
 export FLUTTER_PUB="$HOME/.pub-cache/bin"
-export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$PATH"
+export ATUIN_BIN="$HOME/.atuin/bin"
+export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$PATH"
 
 ## NVIM CONFS
 alias v='nvim' # default Neovim config
@@ -133,3 +134,4 @@ pokemon-colorscripts --no-title -r 1,3,6
 # Evals
 eval "$(zoxide init zsh)"
 eval "$(tmuxifier init -)"
+eval "$(atuin init zsh)"

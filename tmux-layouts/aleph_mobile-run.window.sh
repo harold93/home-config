@@ -17,7 +17,7 @@ new_window "run"
 # Paste text
 #send_keys "top"    # paste into active pane
 #send_keys "date" 1 # paste into pane 1
-send_keys "flutter run --dart-define=HOST_API=http://10.0.2.2:3000/api/v1 -d emulator-5554"
+send_keys "flutter run --dart-define=HOST_API=http://10.0.2.2:3000/api/v1 -d emulator-5554" 1
 
 # Set active pane.
 #select_pane 0

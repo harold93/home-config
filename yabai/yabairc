@@ -72,4 +72,9 @@ yabai -m rule --add app="Ruby Mine" space=^6
 yabai -m rule --add app="Android Studio" space=^7
 yabai -m rule --add app="iTerm" space=^8
 
+# the folling package give a clue on active window
+# bootstrap with yabai:  https://github.com/FelixKratz/JankyBorders?tab=readme-ov-file#bootstrap-with-yabai
+borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
+
 echo "yabai configuration loaded.."
+

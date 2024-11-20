@@ -16,37 +16,36 @@ yabai -m signal --add event=display_added action="sleep 2 && $HOME/.config/yabai
 yabai -m signal --add event=display_removed action="sleep 2 && $HOME/.config/yabai/create_spaces.sh"
 
 # global settings
-yabai -m config                                 \
-    external_bar                 off:40:0       \
-    menubar_opacity              1.0            \
-    mouse_follows_focus          off            \
-    focus_follows_mouse          off            \
-    display_arrangement_order    default        \
-    window_origin_display        default        \
-    window_placement             second_child   \
-    window_zoom_persist          on             \
-    window_shadow                on             \
-    window_animation_duration    0.0            \
-    window_animation_easing      ease_out_circ  \
-    window_opacity_duration      0.0            \
-    active_window_opacity        1.0            \
-    normal_window_opacity        0.90           \
-    window_opacity               off            \
-    insert_feedback_color        0xffd75f5f     \
-    split_ratio                  0.50           \
-    split_type                   auto           \
-    auto_balance                 off            \
-    top_padding                  12             \
-    bottom_padding               12             \
-    left_padding                 12             \
-    right_padding                12             \
-    window_gap                   06             \
-    layout                       bsp            \
-    mouse_modifier               fn             \
-    mouse_action1                move           \
-    mouse_action2                resize         \
-    mouse_drop_action            swap
-
+yabai -m config \
+  external_bar off:40:0 \
+  menubar_opacity 1.0 \
+  mouse_follows_focus off \
+  focus_follows_mouse off \
+  display_arrangement_order default \
+  window_origin_display default \
+  window_placement second_child \
+  window_zoom_persist on \
+  window_shadow on \
+  window_animation_duration 0.0 \
+  window_animation_easing ease_out_circ \
+  window_opacity_duration 0.0 \
+  active_window_opacity 1.0 \
+  normal_window_opacity 0.90 \
+  window_opacity off \
+  insert_feedback_color 0xffd75f5f \
+  split_ratio 0.50 \
+  split_type auto \
+  auto_balance off \
+  top_padding 12 \
+  bottom_padding 12 \
+  left_padding 12 \
+  right_padding 12 \
+  window_gap 06 \
+  layout bsp \
+  mouse_modifier fn \
+  mouse_action1 move \
+  mouse_action2 resize \
+  mouse_drop_action swap
 
 # creating spaces if doesn't exist
 $HOME/.config/yabai/create_spaces.sh
@@ -56,7 +55,7 @@ yabai -m rule --add app="^(Software Update|Dictionary|VLC|System Preferences|Sys
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
 
-# Premiere need this in order to be managed properly 
+# Premiere need this in order to be managed properly
 # lines to be tested
 # yabai -m rule --add app="^Adobe Premiere Pro 2024$" role="AXLayoutArea" subrole="AXFloatingWindow" manage=on
 # yabai -m rule --add app="^Adobe Premiere Pro 2024$" role="AXLayoutArea" subrole="AXDialog" manage=on
@@ -68,7 +67,7 @@ yabai -m rule --add app="Notion" space=^2
 yabai -m rule --add app="Figma" space=^3
 yabai -m rule --add app="Slack" space=^4
 yabai -m rule --add app="Spotify" space=^5
-yabai -m rule --add app="Ruby Mine" space=^6
+yabai -m rule --add app="RubyMine" space=^6
 yabai -m rule --add app="Android Studio" space=^7
 yabai -m rule --add app="iTerm" space=^8
 
@@ -77,4 +76,3 @@ yabai -m rule --add app="iTerm" space=^8
 borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
 
 echo "yabai configuration loaded.."
-

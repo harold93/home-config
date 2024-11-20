@@ -122,9 +122,9 @@ alt - n : open -a 'Notion'
 alt - f : open -a 'Figma'
 alt - s : open -a 'Slack'
 alt - m : open -a 'Spotify'
-alt - r : open -a 'Ruby Mine'
+alt - r : open -a 'RubyMine'
 alt - a : open -a 'Android Studio'
-alt - return : open -a 'iTerm'
+shift + alt - return : open -a 'iTerm'
 
 ### focus window
 alt - h : yabai -m window --focus west

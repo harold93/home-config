@@ -23,12 +23,15 @@ setup_space 5 music
 setup_space 6 code_rubymine
 setup_space 7 code_android_studio
 setup_space 8 terminal
+setup_space 9 tmp_space
 
-# Move space 6/7/8 to the second display when it's connected
+# Move spaces to the second display when it's connected
 yabai -m space 6 --display 2
 yabai -m space 7 --display 2
 yabai -m space 8 --display 2
-# Assign space 6/7/8 to the second display
+yabai -m space 9 --display 2
+# Assign spaces to the second display
 yabai -m display --add 2 --space 6
 yabai -m display --add 2 --space 7
 yabai -m display --add 2 --space 8
+yabai -m display --add 2 --space 9

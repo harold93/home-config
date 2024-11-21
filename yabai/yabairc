@@ -60,6 +60,7 @@ jetbrain_apps='^(Android Studio|RubyMine)$'
 # jetbrain_popups="^()$"
 yabai -m rule --add app="${jetbrain_apps}" label="Harpoon" title="Harpoon" manage=off
 yabai -m rule --add app="${jetbrain_apps}" title="Update Project" manage=off
+yabai -m rule --add app="${jetbrain_apps}" label="Merge.*" title="Merge.*" manage=off
 
 # Premiere need this in order to be managed properly
 # lines to be tested

@@ -16,6 +16,7 @@ yabai -m signal --add event=display_added action="sleep 2 && $HOME/.config/yabai
 yabai -m signal --add event=display_removed action="sleep 2 && $HOME/.config/yabai/create_spaces.sh"
 
 # global settings
+yabai -m config window_topmost off
 yabai -m config \
   external_bar off:40:0 \
   menubar_opacity 1.0 \

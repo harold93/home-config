@@ -62,6 +62,7 @@ yabai -m rule --add app="${jetbrain_apps}" label="Harpoon" title="Harpoon" manag
 yabai -m rule --add app="${jetbrain_apps}" title="Update Project" manage=off
 yabai -m rule --add app="${jetbrain_apps}" label="Merge.*" title="Merge.*" manage=off
 yabai -m rule --add app="${jetbrain_apps}" label="Conflicts.*" title="Conflicts.*" manage=off
+yabai -m rule --add app="${jetbrain_apps}" label="Rename.*" title="Rename.*" manage=off
 
 # Premiere need this in order to be managed properly
 # lines to be tested

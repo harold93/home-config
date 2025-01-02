@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+echo -n 'give the sprint id: '
+read -r SPRINT_NBR
+
+if ! [[ "$SPRINT_NBR" =~ ^[0-9]+$ ]]; then
+  echo "Error: Not a number" >&2
+  exit 1
+fi
+
+SPRINT_NAME="sprint-$SPRINT_NBR"
+
+echo -n 'how many epics there is in this sprint: '
+read -r EPIC_NBR
+
+if ! [[ "$EPIC_NBR" =~ ^[0-9]+$ ]]; then
+  echo "Error: Not a number" >&2
+  exit 1
+fi
+
+git branch $SPRINT_NAME
+
+# if [[ $? -eq '0' ]]; then
+git push --set-upstream origin $SPRINT_NAME
+# echo '-> created branch'
+# fi
+
+for ((i = 0; i <= $EPIC_NBR; i++)); do
+  index_formatted=$(printf "%02d" "$i")
+
+  git branch "epic-$SPRINT_NBR-$index_formatted"
+
+  # if [[ $? -eq '0' ]]; then
+  git push --set-upstream origin "epic-$SPRINT_NBR-$index_formatted"
+  #   echo '-> created branch'
+  # fi
+done

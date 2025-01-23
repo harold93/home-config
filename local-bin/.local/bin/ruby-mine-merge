@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-ruby-mine merge $2 $1 $2
+rubymine merge $2 $1 $2

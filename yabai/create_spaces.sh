@@ -17,11 +17,11 @@ function setup_space {
 
 setup_space 1 web
 setup_space 2 notion
-setup_space 3 figma
+setup_space 3 terminal
 setup_space 4 messaging
-setup_space 5 music
+setup_space 5 figma
 setup_space 6 tmp_space_first
-setup_space 7 terminal
+setup_space 7 music
 setup_space 8 code_rubymine
 setup_space 9 code_android_studio
 setup_space 0 tmp_space_second

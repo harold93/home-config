@@ -74,10 +74,10 @@ yabai -m rule --add app="${jetbrain_apps}" label="Settings.*" title="Settings.*"
 # if you put "^" before space number, the space will be focused after application is started
 yabai -m rule --add app="Arc" space=^1
 yabai -m rule --add app="Notion" space=^2
-yabai -m rule --add app="Figma" space=^3
+yabai -m rule --add app="iTerm" space=^3
 yabai -m rule --add app="Slack" space=^4
-yabai -m rule --add app="Spotify" space=^5
-yabai -m rule --add app="iTerm" space=^7
+yabai -m rule --add app="Figma" space=^5
+yabai -m rule --add app="Spotify" space=^7
 yabai -m rule --add app="RubyMine" space=^8
 yabai -m rule --add app="Android Studio" space=^9
 

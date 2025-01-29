@@ -132,11 +132,11 @@ nmap <leader>h3 :action SetHarpoon3<cr>
 nmap <leader>h4 :action SetHarpoon4<cr>
 nmap <leader>h5 :action SetHarpoon5<cr>
 
-nmap <leader>1 :action GotoHarpoon1<cr>
-nmap <leader>2 :action GotoHarpoon2<cr>
-nmap <leader>3 :action GotoHarpoon3<cr>
-nmap <leader>4 :action GotoHarpoon4<cr>
-nmap <leader>5 :action GotoHarpoon5<cr>
+nmap <C-1> :action GotoHarpoon1<cr>
+nmap <C-2> :action GotoHarpoon2<cr>
+nmap <C-3> :action GotoHarpoon3<cr>
+nmap <C-4> :action GotoHarpoon4<cr>
+nmap <C-5> :action GotoHarpoon5<cr>
 
 nmap <leader>h :action ShowHarpoon<cr>
 nmap <leader>H :action AddToHarpoon<cr>

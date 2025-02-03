@@ -3,3 +3,4 @@
 /tmux/plugins/
 .idea/
 lazygit/state.yml
+node_modules/

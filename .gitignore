@@ -4,3 +4,5 @@
 .idea/
 lazygit/state.yml
 node_modules/
+**/node_modules/
+

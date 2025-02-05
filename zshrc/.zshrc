@@ -107,7 +107,8 @@ export CARGO_BIN='/home/harold/.cargo/bin'
 export LOCAL_BIN='/home/harold/.local/bin'
 export FLUTTER_PUB="$HOME/.pub-cache/bin"
 export ATUIN_BIN="$HOME/.atuin/bin"
-export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$PATH"
+export YARN_GLOBAL_BIN="$HOME/.yarn/bin"
+export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$PATH"
 
 ## NVIM CONFS
 alias v='nvim' # default Neovim config

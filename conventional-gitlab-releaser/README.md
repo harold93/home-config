@@ -5,6 +5,9 @@
 
 > Make a new GitLab release from git metadata.
 
+**Note:** This package is a fork of [conventional-gitlab-releaser](https://github.com/conventional-changelog/releaser-tools/commits/master/packages/conventional-gitlab-releaser). I am not the maintainer of the original tool. This fork was created to release a patch for GitLab api that has not yet been published: [19da7d1](https://github.com/conventional-changelog/releaser-tools/commit/19da7d132fcd74b10c9fef5c66d015be4a6dc213).
+
+
 **Note** You don't have to use the angular commit convention. For the best result of the tool to tokenize you commit and produce flexible output, it's recommended to use a commit convention.
 
 ## Table of Contents

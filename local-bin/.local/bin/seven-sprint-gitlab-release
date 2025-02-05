@@ -1,0 +1,147 @@
+#!/usr/bin/env bash
+
+### Why angular preset, they have a cool commit linter, 'https://github.com/conventional-changelog/commitlint/#what-is-commitlint'
+
+## Step 1
+# check if there is a gitlab token !
+if [ -z "$CONVENTIONAL_GITLAB_RELEASER_TOKEN" ]; then
+  echo 'CONVENTIONAL_GITLAB_RELEASER_TOKEN is not set' >&2
+  echo 'we need this in order to release on gitlab' >&2
+  exit 1
+fi
+
+## Step 2
+# check if conventional-changelog-cli, conventional-changelog-angular
+# and conventional-gitlab-releaser-seven
+# are installed otherwise install them
+if ! command -v conventional-changelog &>/dev/null; then
+  echo 'You should install conventional-changelog-cli and conventional-changelog-angular' >&2
+  echo 'e.g: yarn global add conventional-changelog-cli conventional-changelog-angular' >&2
+  exit 1
+fi
+
+if ! command -v conventional-gitlab-releaser-seven &>/dev/null; then
+  echo 'You should install conventional-gitlab-releaser-seven' >&2
+  echo 'e.g: yarn global add conventional-gitlab-releaser-seven' >&2
+  exit 1
+fi
+
+## Step 3
+# return 1 if there is a diff
+if ! git diff --quiet @{upstream}; then
+  echo 'You have unstage files, your repo must be clean e.g: grhh' >&2
+  exit 1
+else
+  echo '~~> nothing to push ✅'
+fi
+
+## Step 4
+if ! git pull --rebase &>/dev/null; then
+  echo "Error: couldn't pull current branch" >&2
+  exit 1
+else
+  echo '~~> repo updated ✅'
+fi
+
+## Step 5
+# check if at least a version has been given
+if [ "$#" -ne 1 ]; then
+  echo 'help:' >&2
+  echo -e '\t./seven-sprint-gitlab-release 2.25.1' >&2
+  exit 1
+fi
+# check if it is semver
+if ! [[ "$1" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+  echo "Error: Not a semver format" >&2
+  exit 1
+fi
+
+## Step 6
+# change version in file,
+# so that conventional-changelog, can generate updates
+# this cmd will only modify package.json
+if ! yarn version --no-git-tag-version --new-version "$1" &>/dev/null; then
+  echo "Error: yarn version --no-git-tag-version --new-version $1" >&2
+  exit 1
+fi
+
+## Step 7
+# generate update on CHANGELOG.md, applying angular preset
+if ! conventional-changelog -i CHANGELOG.md -s -p angular; then
+  echo "Error: conventional-changelog generation failed" >&2
+  exit 1
+else
+  echo '~~> changelog generated ✅'
+fi
+
+## Step 8
+# reset package.json, so that yarn version can process
+git checkout package.json &>/dev/null
+
+## Step 9
+# add and commit new version
+git add CHANGELOG.md &>/dev/null
+if ! git commit -m "docs(CHANGELOG): $1" &>/dev/null; then
+  echo "Error: couldn't commit changelog" >&2
+  exit 1
+else
+  echo '~~> changelog file commited ✅'
+fi
+
+## Step 10
+# this creates a semver commit,
+# so that next time we apply conventional-changelog it will stop at this commit,
+# it creates tags too
+yarn version --new-version "$1" &>/dev/null
+if [[ $? -ne '0' ]]; then
+  echo "Error: couldn't generate new version " >&2
+  exit 1
+else
+  echo '~~> new package.json version commited ✅'
+fi
+
+## Step 11
+# push without tag changelog commit and semver commit gen by yarn version
+if ! git push &>/dev/null; then
+  echo "Error: couldn't push changelog and new version of package.json" >&2
+  exit 1
+else
+  echo '~~> changelog file pushed ✅'
+  echo '~~> package.json version pushed ✅'
+fi
+
+## Step 12
+# use gitlab api
+# CONVENTIONAL_GITLAB_RELEASER_TOKEN=your-token DEBUG=conventional-gitlab-releaser conventional-gitlab-releaser-seven -v -p angular
+if ! DEBUG=conventional-gitlab-releaser conventional-gitlab-releaser-seven -p angular; then
+  echo "Error: couldn't release on gitlab" >&2
+  echo 'e.g: CONVENTIONAL_GITLAB_RELEASER_TOKEN=your-token conventional-gitlab-releaser-seven -p angular'
+  exit 1
+else
+  echo '~~> Release to gitlab done ✅'
+fi
+
+## Step 13
+# remove the genrated tag genrated by yarn version --new-version
+# the command genrates a tag starting with a V
+# e.g: v$1
+# we need to remove it because gitlab api will generate the same tag, but without starting with a V
+# but the generated tag must be deleted AFTER conventional-gitlab-releaser
+# because it the command releases the last tag in current history, so it must exist !
+
+if ! git tag -d "v$1" &>/dev/null; then
+  echo "Error: couldn't delete local tag" >&2
+  exit 1
+else
+  echo '~~> local tag deleted ✅'
+fi
+
+## Step 14
+# fetch tag generated for release by gitlab
+sleep 0.8
+if ! git pull --rebase &>/dev/null; then
+  echo "Error: couldn't pull tags" >&2
+  exit 1
+else
+  echo '~~> tag generated for release by gitlab fetched ✅'
+fi

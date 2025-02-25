@@ -41,7 +41,10 @@ items = [
   "btop",
   "stow",
   "bruno",
-  "libvips"
+  "libvips",
+  "kubectl",
+  "kubectx",
+  "helm"
 ]
 
 # Packages to be installed via Flatpak.

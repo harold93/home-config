@@ -75,6 +75,7 @@ alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also t
 alias vc='code --ozone-platform-hint=wayland --disable-gpu' # gui code editor
 alias dc='docker-compose'
 alias fnvim='nvim $(fzf --preview="bat --color=always {}" -m)'
+alias k='kubectl'
 
 # Handy change dir shortcuts
 alias ..='cd ..'

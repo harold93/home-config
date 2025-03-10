@@ -133,6 +133,9 @@ transfer(){ if [ $# -eq 0 ];then echo "No arguments specified.\nUsage:\n transfe
 #Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
 
+# keychain - re-use ssh-agent and/or gpg-agent between logins
+eval $(keychain --eval --agents ssh id_ed25519)
+
 # Evals
 eval "$(zoxide init zsh)"
 eval "$(tmuxifier init -)"

@@ -44,7 +44,8 @@ items = [
   "libvips",
   "kubectl",
   "kubectx",
-  "helm"
+  "helm",
+  "keychain"
 ]
 
 # Packages to be installed via Flatpak.

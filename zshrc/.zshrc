@@ -148,3 +148,10 @@ eval "$(zoxide init zsh)"
 eval "$(tmuxifier init -)"
 eval "$(atuin init zsh)"
 source <(fzf --zsh)
+
+## [Completion]
+# Fluter fvm
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/harold/.dart-cli-completion/zsh-config.zsh ]] && . /home/harold/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

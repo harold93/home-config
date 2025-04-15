@@ -116,6 +116,8 @@ export LOCAL_BIN='/home/harold/.local/bin'
 export FLUTTER_PUB="$HOME/.pub-cache/bin"
 export ATUIN_BIN="$HOME/.atuin/bin"
 export YARN_GLOBAL_BIN="$HOME/.yarn/bin"
+export GOBIN="$(go env GOPATH)/bin"
+
 export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$PATH"
 
 ## NVIM CONFS

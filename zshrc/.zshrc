@@ -118,7 +118,7 @@ export ATUIN_BIN="$HOME/.atuin/bin"
 export YARN_GLOBAL_BIN="$HOME/.yarn/bin"
 export GOBIN="$(go env GOPATH)/bin"
 
-export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$PATH"
+export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$GOBIN:$PATH"
 
 ## NVIM CONFS
 alias v='nvim' # default Neovim config

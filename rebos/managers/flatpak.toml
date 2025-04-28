@@ -6,7 +6,7 @@ upgrade = "flatpak upgrade"
 
 plural_name = "flatpaks"
 
-hook_name = ""
+# hook_name = ""
 
 [config]
 many_args = true

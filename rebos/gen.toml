@@ -45,7 +45,8 @@ items = [
   "kubectl",
   "kubectx",
   "helm",
-  "keychain"
+  "keychain",
+  "yazi"
 ]
 
 # Packages to be installed via Flatpak.

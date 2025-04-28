@@ -15,7 +15,7 @@ upgrade = "yay #:?" # Example: sudo apt upgrade
 
 plural_name = "system packages"
 
-hook_name = ""
+# hook_name = ""
 
 # ------------------------------- #
 #    Additional configuration.    #

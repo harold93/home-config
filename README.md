@@ -1,7 +1,4 @@
 
-### mac deps
-- yabai
-- skhd
-- JankyBorders
-- jq
-
+```sh
+stow .
+```

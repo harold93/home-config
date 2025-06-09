@@ -1,9 +1,0 @@
-[Unit]
-Description=xremap service
-After=default.target
-
-[Service]
-ExecStart=/home/harold/.cargo/bin/xremap /home/harold/.config/xremap/config.yml
-
-[Install]
-WantedBy=default.target

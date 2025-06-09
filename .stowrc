@@ -1,0 +1,13 @@
+--dir=./src
+--target=~/
+--ignore=.DS_Store
+--ignore=.commitlintrc.json
+--ignore=.git
+--ignore=.gitignore
+--ignore=.stowrc
+--ignore=Brewfile
+--ignore=README.md
+--ignore=package.json
+--ignore=setup.sh
+--ignore=yarn.lock
+--dotfiles

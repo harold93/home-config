@@ -102,8 +102,6 @@ alias mkdir='mkdir -p'
 export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux-layouts"
 # def editor
 export EDITOR='nvim'
-# tiptap npm cred
-export NPM_TIPTAP_AUTH_TOKEN='JBRkT3z5LeJlpVWcBy7t48PKVoACO3rGUwLxHJeAomePenTK9U/tr9Vd0ytDddNLuCl91ZSp82CPD1hYX/9C1A=='
 # for flutter
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 # to avoid arch linux kernel 6.9.2-arch1-1 fail with yarn && node

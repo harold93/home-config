@@ -5,9 +5,9 @@
 
 cd ~/
 mkdir -p code/pers
-cd code/pers
+cd ~/code/pers
 git clone -b macbook https://github.com/harold93/home-config.git
-cd home-config
+cd ~/code/pers/home-config
 
 brew bundle
 

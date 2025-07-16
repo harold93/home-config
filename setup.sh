@@ -11,4 +11,5 @@ cd ~/code/pers/home-config
 
 brew bundle
 
+mv ~/.zshrc ~/.zshrc.bak
 stow .

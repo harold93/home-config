@@ -5,4 +5,5 @@
 lazygit/state.yml
 node_modules/
 **/node_modules/
-
+src/dot-local/share/
+src/dot-local/state/

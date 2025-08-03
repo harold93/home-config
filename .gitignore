@@ -7,3 +7,4 @@ node_modules/
 **/node_modules/
 src/dot-local/share/
 src/dot-local/state/
+src/dot-config/iterm2/

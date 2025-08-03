@@ -1,5 +1,6 @@
 tap "felixkratz/formulae"
 tap "koekeishiya/formulae"
+tap "nikitabobko/tap"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 # Improved shell history for zsh, bash, fish and nushell
@@ -48,8 +49,12 @@ brew "zsh-syntax-highlighting"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "aerospace"
 # Tools for building Android applications
 cask "android-studio"
+# Chromium based browser
+cask "arc"
 cask "font-source-code-pro-for-powerline"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"

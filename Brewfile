@@ -1,5 +1,4 @@
 tap "felixkratz/formulae"
-tap "koekeishiya/formulae"
 tap "nikitabobko/tap"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
@@ -45,10 +44,6 @@ brew "zoxide"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Simple hotkey-daemon for macOS.
-brew "koekeishiya/formulae/skhd"
-# A tiling window manager for macOS based on binary space partitioning.
-brew "koekeishiya/formulae/yabai"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
 # Tools for building Android applications

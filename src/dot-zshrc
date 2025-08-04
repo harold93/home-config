@@ -101,8 +101,8 @@ export UV_USE_IO_URING=0
 
 ##### BIN PATH #####
 export TMUXIFIER_BIN="$HOME/.tmuxifier/bin"
-export CARGO_BIN='/home/harold/.cargo/bin'
-export LOCAL_BIN='/home/harold/.local/bin'
+export CARGO_BIN="$HOME/.cargo/bin"
+export LOCAL_BIN="$HOME/.local/bin"
 export FLUTTER_PUB="$HOME/.pub-cache/bin"
 export ATUIN_BIN="$HOME/.atuin/bin"
 export YARN_GLOBAL_BIN="$HOME/.yarn/bin"

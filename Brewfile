@@ -1,3 +1,4 @@
+tap "cormacrelf/tap"
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
 tap "osx-cross/arm"
@@ -46,6 +47,8 @@ brew "zoxide"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Watcher for macOS 10.14+ light/dark mode changes
+brew "cormacrelf/tap/dark-notify"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
 # Tools for building Android applications

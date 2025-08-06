@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# we install git in order to be able to install ohmyzsh
+brew install git
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -13,3 +16,11 @@ brew bundle
 
 mv ~/.zshrc ~/.zshrc.bak
 stow .
+
+# to be compatible with aerospace, we need these settings
+defaults write com.apple.dock expose-group-apps -bool true && killall Dock
+defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
+
+# run these apps at least once, to setup settings rights
+open -a Karabiner-Elements
+open -a AeroSpace

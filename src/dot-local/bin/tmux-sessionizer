@@ -1,25 +1,35 @@
 #!/usr/bin/env bash
 
 if [[ $# -eq 1 ]]; then
-    selected=$1
+  selected=$1
 else
-    selected=$(find ~/ ~/code ~/code/playground ~/code/pers ~/code/seven -mindepth 1 -maxdepth 1 -type d | fzf)
+  selected_home=$(find ~/ -mindepth 0 -maxdepth 1 -type d)
+  selected_code=$(find ~/code -mindepth 1 -maxdepth 2 -type d)
+
+  if [ -d ~/code ]; then
+    selected_code=$(find ~/code -mindepth 1 -maxdepth 2 -type d)
+    combined=$(printf "%s\n%s" "$selected_home" "$selected_code")
+  else
+    combined=$selected_home
+  fi
+
+  selected=$(printf "%s\n" "$combined" | fzf)
 fi
 
 if [[ -z $selected ]]; then
-    exit 0
+  exit 0
 fi
 
 selected_name=$(basename "$selected")
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
-    exit 0
+  tmux new-session -s $selected_name -c $selected
+  exit 0
 fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
+if ! tmux has-session -t=$selected_name 2>/dev/null; then
+  tmux new-session -ds $selected_name -c $selected
 fi
 
 tmux switch-client -t $selected_name

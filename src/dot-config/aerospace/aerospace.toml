@@ -41,7 +41,7 @@ automatically-unhide-macos-hidden-apps = true
 
 exec-on-workspace-change = [
     "/bin/bash", "-c",
-  "
+  """
   case \"$AEROSPACE_FOCUSED_WORKSPACE\" in
     1)
       open -a 'Arc'
@@ -65,7 +65,7 @@ exec-on-workspace-change = [
       open -a 'Visual Studio Code'
       ;;
   esac
-  "
+  """
 ]
 
 # Possible values: (qwerty|dvorak|colemak)

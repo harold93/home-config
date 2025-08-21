@@ -3,6 +3,7 @@ tap "felixkratz/formulae"
 tap "nikitabobko/tap"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
+tap "heroku/brew"
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -49,6 +50,33 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # Watcher for macOS 10.14+ light/dark mode changes
 brew "cormacrelf/tap/dark-notify"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
+# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
+brew "ruby-install"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Kubernetes package manager
+brew "helm"
+brew "kubectl"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# NCurses Disk Usage
+brew "ncdu"
+# Port scanning utility for large networks
+brew "nmap"
+# Platform built on V8 to build network applications
+brew "node"
+# Image processing library
+brew "vips"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# JavaScript package manager
+brew "yarn"
+# Collaboration platform for API development
+cask "postman"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
 # Tools for building Android applications

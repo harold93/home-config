@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ssh key generation if doesn't exist
+[ -f ~/.ssh/id_ed25519 ] || ssh-keygen -t ed25519
+
 # we install git in order to be able to install ohmyzsh
 brew install git
 

@@ -24,3 +24,6 @@ defaults write com.apple.spaces spans-displays -bool true && killall SystemUISer
 # run these apps at least once, to setup settings rights
 open -a Karabiner-Elements
 open -a AeroSpace
+
+# install a new version of ruby
+ruby-install ruby 3.4.1

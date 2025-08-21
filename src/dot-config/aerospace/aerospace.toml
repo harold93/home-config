@@ -39,6 +39,35 @@ on-focus-changed = ['move-mouse window-lazy-center'] # Mouse lazily follows any 
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
+exec-on-workspace-change = [
+    "/bin/bash", "-c",
+  "
+  case \"$AEROSPACE_FOCUSED_WORKSPACE\" in
+    1)
+      open -a 'Arc'
+      ;;
+    s)
+      open -a 'Slack'
+      ;;
+    r)
+      open -a 'Rubymine'
+      ;;
+    a)
+      open -a 'Android Studio'
+      ;;
+    t)
+      open -a 'iTerm'
+      ;;
+    e)
+      open -a 'Simulator'
+      ;;
+    c)
+      open -a 'Visual Studio Code'
+      ;;
+  esac
+  "
+]
+
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -210,6 +239,10 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.apple.iphonesimulator'
     run = ['move-node-to-workspace e']
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.VSCode'
+    run = ['move-node-to-workspace c']
 
 [workspace-to-monitor-force-assignment]
     r = 'secondary' # Non-main monitor in case when there are only two monitors

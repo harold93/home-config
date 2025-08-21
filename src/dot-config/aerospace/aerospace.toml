@@ -25,12 +25,14 @@ default-root-container-layout = 'tiles'
 #               tall monitor (anything higher than wide) gets vertical orientation
 default-root-container-orientation = 'auto'
 
+on-focus-changed = ['move-mouse window-lazy-center'] # Mouse lazily follows any focus (window or workspace) 
+
 # Mouse follows focus when focused monitor changes
 # Drop it from your config, if you don't like this behavior
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+# on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -185,6 +187,36 @@ automatically-unhide-macos-hidden-apps = true
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
 
+[[on-window-detected]]
+    if.app-id = 'company.thebrowser.Browser'
+    run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = ['move-node-to-workspace s']
+
+[[on-window-detected]]
+    if.app-id = 'com.jetbrains.rubymine'
+    run = ['move-node-to-workspace r']
+
+[[on-window-detected]]
+    if.app-id = 'com.google.android.studio'
+    run = ['move-node-to-workspace a']
+
+[[on-window-detected]]
+    if.app-id = 'com.googlecode.iterm2'
+    run = ['move-node-to-workspace t']
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.iphonesimulator'
+    run = ['move-node-to-workspace e']
+
+[workspace-to-monitor-force-assignment]
+    r = 'secondary' # Non-main monitor in case when there are only two monitors
+    e = 'secondary' # Non-main monitor in case when there are only two monitors
+
+
+## Other bindings
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]

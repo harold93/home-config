@@ -3,11 +3,14 @@
 # ssh key generation if doesn't exist
 [ -f ~/.ssh/id_ed25519 ] || ssh-keygen -t ed25519
 
+# install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # we install git in order to be able to install ohmyzsh
 brew install git
 
+# install Oh My Zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 
 cd ~/
 mkdir -p code/pers

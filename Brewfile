@@ -4,6 +4,7 @@ tap "nikitabobko/tap"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "heroku/brew"
+tap "leoafarias/fvm"
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -75,6 +76,7 @@ brew "vips"
 brew "watch"
 # JavaScript package manager
 brew "yarn"
+brew "fvm"
 # Collaboration platform for API development
 cask "postman"
 # AeroSpace is an i3-like tiling window manager for macOS

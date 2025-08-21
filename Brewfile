@@ -76,7 +76,7 @@ brew "vips"
 brew "watch"
 # JavaScript package manager
 brew "yarn"
-brew "fvm"
+brew "leoafarias/fvm/fvm"
 # Collaboration platform for API development
 cask "postman"
 # AeroSpace is an i3-like tiling window manager for macOS

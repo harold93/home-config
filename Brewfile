@@ -1,14 +1,22 @@
 tap "cormacrelf/tap"
 tap "felixkratz/formulae"
+tap "heroku/brew"
+tap "leoafarias/fvm"
 tap "nikitabobko/tap"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
-tap "heroku/brew"
-tap "leoafarias/fvm"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Parser generator
+brew "bison"
 # Ruby environment tool
 brew "chruby"
 # Pack, ship and run any application as a lightweight container
@@ -17,32 +25,66 @@ brew "docker"
 brew "docker-compose"
 # Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Audit git repos for secrets
 brew "gitleaks"
+# Library for command-line editing
+brew "readline"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Kubernetes package manager
+brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # User-friendly front-end to ssh-agent(1)
 brew "keychain"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Portable Foreign Function Interface library
+brew "libffi"
+# Postgres C API library
+brew "libpq"
+# YAML Parser
+brew "libyaml"
 # Mac App Store command-line interface
 brew "mas"
+# NCurses Disk Usage
+brew "ncdu"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
+# Platform built on V8 to build network applications
+brew "node"
 # Theme for zsh
 brew "powerlevel10k"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
+brew "ruby-install"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Terminal multiplexer
 brew "tmux"
+# Plugin manager for tmux
+brew "tpm"
+# Image processing library
+brew "vips"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# JavaScript package manager
+brew "yarn"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Fish-like fast/unobtrusive autosuggestions for zsh
@@ -53,32 +95,8 @@ brew "zsh-syntax-highlighting"
 brew "cormacrelf/tap/dark-notify"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
-# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
-brew "ruby-install"
-# Simple, fast and user-friendly alternative to find
-brew "fd"
-# Syntax-highlighting pager for git and diff output
-brew "git-delta"
-# Kubernetes package manager
-brew "helm"
-brew "kubectl"
-# Tool that can switch between kubectl contexts easily and create aliases
-brew "kubectx"
-# NCurses Disk Usage
-brew "ncdu"
-# Port scanning utility for large networks
-brew "nmap"
-# Platform built on V8 to build network applications
-brew "node"
-# Image processing library
-brew "vips"
-# Executes a program periodically, showing output fullscreen
-brew "watch"
-# JavaScript package manager
-brew "yarn"
+# Simple cli to manage Flutter SDK versions per project
 brew "leoafarias/fvm/fvm"
-# Collaboration platform for API development
-cask "postman"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
 # Tools for building Android applications
@@ -92,6 +110,8 @@ cask "iterm2"
 cask "karabiner-elements"
 # Neovim Client
 cask "neovide-app"
+# Collaboration platform for API development
+cask "postman"
 # Ruby on Rails IDE
 cask "rubymine"
 # Team communication and collaboration software
@@ -105,19 +125,33 @@ mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "ahmadawais.shades-of-purple"
 vscode "aki77.rails-db-schema"
+vscode "alexisvt.flutter-snippets"
+vscode "bbenoist.nix"
 vscode "bung87.rails"
 vscode "bung87.vscode-gemfile"
 vscode "bungcip.better-toml"
 vscode "castwide.solargraph"
+vscode "catppuccin.catppuccin-vsc"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
+vscode "decaycs.decay"
+vscode "enkia.tokyo-night"
+vscode "felixangelov.bloc"
+vscode "figma.figma-vscode-extension"
 vscode "formulahendry.auto-rename-tag"
+vscode "get-snippets.get-snippets"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "hridoy.rails-snippets"
 vscode "ibm.output-colorizer"
+vscode "jdinhlife.gruvbox"
 vscode "jebbs.plantuml"
+vscode "jwsandeman.cyberpunk2077-theme"
 vscode "kaiwood.endwise"
 vscode "lucax88x.codeacejumper"
 vscode "mikestead.dotenv"
+vscode "msnilshartmann.blue-light"
+vscode "mvllow.rose-pine"
 vscode "naumovs.color-highlight"
 vscode "ninoseki.vscode-gem-lens"
 vscode "octref.vetur"
@@ -125,9 +159,13 @@ vscode "oderwat.indent-rainbow"
 vscode "pkief.material-icon-theme"
 vscode "rebornix.ruby"
 vscode "redhat.vscode-yaml"
+vscode "shopify.ruby-lsp"
 vscode "sianglim.slim"
+vscode "stepanvanzuriak.mono"
 vscode "svelte.svelte-vscode"
+vscode "tamasfe.even-better-toml"
 vscode "vincaslt.highlight-matching-tag"
 vscode "vscodevim.vim"
+vscode "vue.volar"
 vscode "wayou.vscode-todo-highlight"
 vscode "wingrunr21.vscode-ruby"

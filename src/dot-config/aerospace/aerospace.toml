@@ -46,22 +46,22 @@ exec-on-workspace-change = [
     1)
       open -a 'Arc'
       ;;
-    s)
+    S)
       open -a 'Slack'
       ;;
-    r)
+    R)
       open -a 'Rubymine'
       ;;
-    a)
+    A)
       open -a 'Android Studio'
       ;;
-    t)
+    T)
       open -a 'iTerm'
       ;;
-    e)
+    E)
       open -a 'Simulator'
       ;;
-    c)
+    C)
       open -a 'Visual Studio Code'
       ;;
   esac
@@ -222,31 +222,31 @@ exec-on-workspace-change = [
 
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'
-    run = ['move-node-to-workspace s']
+    run = ['move-node-to-workspace S']
 
 [[on-window-detected]]
     if.app-id = 'com.jetbrains.rubymine'
-    run = ['move-node-to-workspace r']
+    run = ['move-node-to-workspace R']
 
 [[on-window-detected]]
     if.app-id = 'com.google.android.studio'
-    run = ['move-node-to-workspace a']
+    run = ['move-node-to-workspace A']
 
 [[on-window-detected]]
     if.app-id = 'com.googlecode.iterm2'
-    run = ['move-node-to-workspace t']
+    run = ['move-node-to-workspace T']
 
 [[on-window-detected]]
     if.app-id = 'com.apple.iphonesimulator'
-    run = ['move-node-to-workspace e']
+    run = ['move-node-to-workspace E']
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.VSCode'
-    run = ['move-node-to-workspace c']
+    run = ['move-node-to-workspace C']
 
 [workspace-to-monitor-force-assignment]
-    r = 'secondary' # Non-main monitor in case when there are only two monitors
-    e = 'secondary' # Non-main monitor in case when there are only two monitors
+    T = 'secondary' # Non-main monitor in case when there are only two monitors
+    E = 'secondary' # Non-main monitor in case when there are only two monitors
 
 
 ## Other bindings

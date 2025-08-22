@@ -69,6 +69,8 @@ brew "neovim"
 brew "nmap"
 # Platform built on V8 to build network applications
 brew "node"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Theme for zsh
 brew "powerlevel10k"
 # Search tool like grep and The Silver Searcher

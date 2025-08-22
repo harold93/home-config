@@ -19,6 +19,8 @@ brew "bat"
 brew "bison"
 # Ruby environment tool
 brew "chruby"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima", restart_service: :changed
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # Isolated development environments using Docker

@@ -11,7 +11,6 @@ brew install git
 # install Oh My Zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-
 cd ~/
 mkdir -p code/pers
 cd ~/code/pers
@@ -33,3 +32,6 @@ open -a AeroSpace
 
 # install a new version of ruby
 ruby-install ruby 3.4.1
+
+# setup background services at login
+brew services start colima

@@ -1,3 +1,9 @@
+####### Key binding #######
+bindkey '^[[1;3D' backward-word
+bindkey '^[[1;3C' forward-word
+###########################
+
+
 ####### Source code #######
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.

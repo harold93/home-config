@@ -18,6 +18,12 @@ source $(brew --prefix zsh-autosuggestions)/share/zsh-autosuggestions/zsh-autosu
 source $(brew --prefix zsh-syntax-highlighting)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Fluter fvm completion scripts setup. Remove the following line to uninstall
 [[ -f $HOME/.dart-cli-completion/zsh-config.zsh ]] && . $HOME/.dart-cli-completion/zsh-config.zsh || true
+# Auto complete fzf
+source <(fzf --zsh)
+
+# P10k promts
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ############################
 
 ####### O-M-Z config #######
@@ -127,13 +133,9 @@ vv() {
 ##################
 
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # keychain - re-use ssh-agent and/or gpg-agent between logins
 eval $(keychain --eval id_ed25519)
 eval "$(zoxide init zsh)"
 # FIXME: tmuxifier is not in part of homebrew, so throws an error when runnig the installation script
 # eval "$(tmuxifier init -)"
 eval "$(atuin init zsh)"
-source <(fzf --zsh)

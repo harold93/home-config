@@ -107,6 +107,8 @@ cask "aerospace"
 cask "android-studio"
 # Chromium based browser
 cask "arc"
+# Voice and text chat software
+cask "discord"
 cask "font-source-code-pro-for-powerline"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"

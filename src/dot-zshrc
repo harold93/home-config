@@ -108,6 +108,10 @@ export EDITOR='nvim'
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 # to avoid arch linux kernel 6.9.2-arch1-1 fail with yarn && node
 export UV_USE_IO_URING=0
+# Nvm (Node version manager)
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
+[ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 ###################
 
 

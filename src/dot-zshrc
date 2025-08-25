@@ -85,7 +85,7 @@ alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --group-directories-first --git' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias vc='code --ozone-platform-hint=wayland --disable-gpu' # gui code editor
-alias dc='docker compose'
+alias dc='docker-compose'
 alias vf='nvim $(fzf --preview="bat --color=always {}" -m)'
 alias k='kubectl'
 # Handy change dir shortcuts

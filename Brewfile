@@ -21,6 +21,8 @@ brew "bison"
 brew "chruby"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", restart_service: :changed
+# CPU usage limiter
+brew "cpulimit"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # Isolated development environments using Docker
@@ -69,6 +71,8 @@ brew "neovim"
 brew "nmap"
 # Platform built on V8 to build network applications
 brew "node"
+# Manage multiple Node.js versions
+brew "nvm"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Theme for zsh
@@ -89,6 +93,8 @@ brew "vips"
 brew "watch"
 # JavaScript package manager
 brew "yarn"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Fish-like fast/unobtrusive autosuggestions for zsh

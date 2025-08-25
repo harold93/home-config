@@ -64,6 +64,9 @@ exec-on-workspace-change = [
     C)
       open -a 'Visual Studio Code'
       ;;
+    M)
+      open -a 'Spotify'
+      ;;
   esac
   """
 ]
@@ -243,6 +246,10 @@ exec-on-workspace-change = [
 [[on-window-detected]]
     if.app-id = 'com.microsoft.VSCode'
     run = ['move-node-to-workspace C']
+
+[[on-window-detected]]
+    if.app-id = 'com.spotify.client'
+    run = ['move-node-to-workspace M']
 
 [workspace-to-monitor-force-assignment]
     T = 'secondary' # Non-main monitor in case when there are only two monitors

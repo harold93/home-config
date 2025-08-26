@@ -25,6 +25,8 @@ brew "colima", restart_service: :changed
 brew "cpulimit"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
 # Isolated development environments using Docker
 brew "docker-compose"
 # Modern, maintained replacement for ls

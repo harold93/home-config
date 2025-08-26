@@ -125,21 +125,21 @@ nnoremap <leader>bl :action ShowBookmarks<CR>
 " files
 nnoremap <leader>fr :action RecentFiles<CR>
 
-" Harpoon conf
-nmap <leader>h1 :action SetHarpoon1<cr>
-nmap <leader>h2 :action SetHarpoon2<cr>
-nmap <leader>h3 :action SetHarpoon3<cr>
-nmap <leader>h4 :action SetHarpoon4<cr>
-nmap <leader>h5 :action SetHarpoon5<cr>
+" Harpooner conf
+" nmap <leader>h1 :action SetHarpoon1<cr>
+" nmap <leader>h2 :action SetHarpoon2<cr>
+" nmap <leader>h3 :action SetHarpoon3<cr>
+" nmap <leader>h4 :action SetHarpoon4<cr>
+" nmap <leader>h5 :action SetHarpoon5<cr>
 
-nmap <C-1> :action GotoHarpoon1<cr>
-nmap <C-2> :action GotoHarpoon2<cr>
-nmap <C-3> :action GotoHarpoon3<cr>
-nmap <C-4> :action GotoHarpoon4<cr>
-nmap <C-5> :action GotoHarpoon5<cr>
+nmap <C-1> :action HarpoonerOpenFile0<cr>
+nmap <C-2> :action HarpoonerOpenFile1<cr>
+nmap <C-3> :action HarpoonerOpenFile2<cr>
+nmap <C-4> :action HarpoonerOpenFile3<cr>
+nmap <C-5> :action HarpoonerOpenFile4<cr>
 
-nmap <leader>h :action ShowHarpoon<cr>
-nmap <leader>H :action AddToHarpoon<cr>
+nmap <leader>h :action HarpoonerToggleQuickMenu<cr>
+nmap <leader>H :action HarpoonerAddFile<cr>
 
 " improving % feature
 Plug 'vim-matchit'

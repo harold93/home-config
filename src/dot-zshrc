@@ -1,9 +1,3 @@
-####### Key binding #######
-bindkey '^[[1;3D' backward-word
-bindkey '^[[1;3C' forward-word
-###########################
-
-
 ####### Source code #######
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -15,6 +9,9 @@ fi
 
 # theme funcs
 source $(brew --prefix powerlevel10k)/share/powerlevel10k/powerlevel10k.zsh-theme
+# P10k promts
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # ruby custom env
 source $(brew --prefix chruby)/share/chruby/chruby.sh
 source $(brew --prefix chruby)/share/chruby/auto.sh
@@ -26,10 +23,8 @@ source $(brew --prefix zsh-syntax-highlighting)/share/zsh-syntax-highlighting/zs
 [[ -f $HOME/.dart-cli-completion/zsh-config.zsh ]] && . $HOME/.dart-cli-completion/zsh-config.zsh || true
 # Auto complete fzf
 source <(fzf --zsh)
-
-# P10k promts
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Shell line editor vim-style
+source $(brew --prefix zsh-vi-mode)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 ############################
 
 ####### O-M-Z config #######

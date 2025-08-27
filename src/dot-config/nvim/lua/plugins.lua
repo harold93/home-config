@@ -718,7 +718,7 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "solargraph", "jsonls", "hls", "volar", "tsserver" },
+				ensure_installed = { "lua_ls", "solargraph", "jsonls", "volar", "ts_ls" },
 			})
 		end,
 	},
@@ -742,9 +742,8 @@ return {
 			lspconfig.lua_ls.setup({})
 			lspconfig.solargraph.setup({})
 			lspconfig.jsonls.setup({})
-			lspconfig.hls.setup({})
 			lspconfig.volar.setup({})
-			lspconfig.tsserver.setup({})
+			lspconfig.ts_ls.setup({})
 
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "go to def" })

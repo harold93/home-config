@@ -83,6 +83,8 @@ brew "powerlevel10k"
 brew "ripgrep"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Terminal multiplexer

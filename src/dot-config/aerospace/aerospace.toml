@@ -56,7 +56,7 @@ exec-on-workspace-change = [
       open -a 'Android Studio'
       ;;
     T)
-      open -a 'iTerm'
+      open -a 'kitty'
       ;;
     E)
       open -a 'Simulator'
@@ -236,7 +236,7 @@ exec-on-workspace-change = [
     run = ['move-node-to-workspace A']
 
 [[on-window-detected]]
-    if.app-id = 'com.googlecode.iterm2'
+    if.app-id = 'net.kovidgoyal.kitty'
     run = ['move-node-to-workspace T']
 
 [[on-window-detected]]

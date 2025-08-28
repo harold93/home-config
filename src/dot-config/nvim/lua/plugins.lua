@@ -259,57 +259,6 @@ return {
 
 	-- Ui stuff
 	-- ****************************************
-	{
-		"loctvl842/monokai-pro.nvim",
-		config = function()
-			require("monokai-pro").setup({
-				transparent_background = true,
-				terminal_colors = true,
-				devicons = true, -- highlight the icons of `nvim-web-devicons`
-				styles = {
-					comment = { italic = true },
-					keyword = { italic = true }, -- any other keyword
-					type = { italic = true }, -- (preferred) int, long, char, etc
-					storageclass = { italic = true }, -- static, register, volatile, etc
-					structure = { italic = true }, -- struct, union, enum, etc
-					parameter = { italic = true }, -- parameter pass in function
-					annotation = { italic = true },
-					tag_attribute = { italic = true }, -- attribute of tag in reactjs
-				},
-				filter = "machine", -- classic | octagon | pro | machine | ristretto | spectrum
-				-- Enable this will disable filter option
-				day_night = {
-					enable = false, -- turn off by default
-					day_filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
-					night_filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
-				},
-				inc_search = "background", -- underline | background
-				background_clear = {},
-				-- background_clear = {
-				--   "float_win",
-				--   "toggleterm",
-				--   "telescope",
-				--   -- "which-key",
-				--   "renamer",
-				--   "notify",
-				--   -- "nvim-tree",
-				--   -- "neo-tree",
-				--   -- "bufferline", -- better used if background of `neo-tree` or `nvim-tree` is cleared
-				-- },-- "float_win", "toggleterm", "telescope", "which-key", "renamer", "neo-tree", "nvim-tree", "bufferline"
-				plugins = {
-					bufferline = {
-						underline_selected = false,
-						underline_visible = false,
-					},
-					indent_blankline = {
-						context_highlight = "default", -- default | pro
-						context_start_underline = false,
-					},
-				},
-			})
-			vim.cmd("colorscheme monokai-pro")
-		end,
-	},
 	-- find files , search grep
 	{
 		"nvim-telescope/telescope.nvim",
@@ -590,7 +539,7 @@ return {
 		-- 	},
 		-- },
 		config = function()
-			local theme = require("lualine.themes.monokai-pro")
+			local theme = require("lualine.themes.catppuccin-frappe")
 			local colors = {
 				yellow = "#ECBE7B",
 				cyan = "#008080",
@@ -603,13 +552,13 @@ return {
 				red = "#ec5f67",
 			}
 
-			if vim.fn.has("macunix") then
-				theme.normal.c.bg = "#1a2c2a21"
-				theme.normal.x.bg = "#1a2c2a21"
-			else
-				theme.normal.c.bg = "#0d0f18"
-				theme.normal.x.bg = "#0d0f18"
-			end
+			-- if vim.fn.has("macunix") then
+			-- 	theme.normal.c.bg = "#1a2c2a21"
+			-- 	theme.normal.x.bg = "#1a2c2a21"
+			-- else
+			-- 	theme.normal.c.bg = "#0d0f18"
+			-- 	theme.normal.x.bg = "#0d0f18"
+			-- end
 
 			local config = {
 				options = { theme = theme },
@@ -702,7 +651,44 @@ return {
 	-- },
 	-- Ui stuff end
 	-- ****************************************
+	{ 
+    "catppuccin/nvim", 
+    name = "catppuccin", 
+    priority = 1000,
+    opts = {
+      transparent_background = true
+    }
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true
+    },
+  },
+	{
+		"cormacrelf/dark-notify",
+		config = function()
+			local dn = require("dark_notify")
 
+			-- mac bin notify
+			-- brew install cormacrelf/tap/dark-notify
+			-- Configure
+			dn.run({
+				schemes = {
+					dark = "tokyonight-moon",
+					light = "catppuccin-latte",
+				},
+				onchange = function(mode)
+					-- optional, you can configure your own things to react to changes.
+					-- this is called at startup and every time dark mode is switched,
+					-- either via the OS, or because you manually set/toggled the mode.
+					-- mode is either "light" or "dark"
+				end,
+			})
+		end,
+	},
 	-- LSP CONFIGS
 	-- *****************************************
 	{
@@ -718,7 +704,7 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "solargraph", "jsonls", "volar", "ts_ls" },
+				ensure_installed = { "lua_ls", "solargraph", "jsonls", "ts_ls" },
 			})
 		end,
 	},
@@ -742,7 +728,6 @@ return {
 			lspconfig.lua_ls.setup({})
 			lspconfig.solargraph.setup({})
 			lspconfig.jsonls.setup({})
-			lspconfig.volar.setup({})
 			lspconfig.ts_ls.setup({})
 
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })
@@ -1032,42 +1017,4 @@ return {
 	},
 	-- Git integration end
 	-- ****************************************
-	{ 
-    "catppuccin/nvim", 
-    name = "catppuccin", 
-    priority = 1000,
-    opts = {
-      transparent_background = true
-    }
-  },
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = true
-    },
-  },
-	{
-		"cormacrelf/dark-notify",
-		config = function()
-			local dn = require("dark_notify")
-
-			-- mac bin notify
-			-- brew install cormacrelf/tap/dark-notify
-			-- Configure
-			dn.run({
-				schemes = {
-					dark = "tokyonight-moon",
-					light = "catppuccin-latte",
-				},
-				onchange = function(mode)
-					-- optional, you can configure your own things to react to changes.
-					-- this is called at startup and every time dark mode is switched,
-					-- either via the OS, or because you manually set/toggled the mode.
-					-- mode is either "light" or "dark"
-				end,
-			})
-		end,
-	},
 }

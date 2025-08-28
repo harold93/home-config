@@ -17,3 +17,4 @@ src/dot-config/nvm/
 src/dot-local/bin/psrecord
 src/dot-local/pipx/
 src/dot-local/bin/git-filter-repo
+src/dot-local/bin/wait-until

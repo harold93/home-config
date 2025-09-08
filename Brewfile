@@ -126,6 +126,8 @@ cask "font-source-code-pro-for-powerline"
 cask "iterm2"
 # Keyboard customiser
 cask "karabiner-elements"
+# GPU-based terminal emulator
+cask "kitty"
 # Neovim Client
 cask "neovide-app"
 # Collaboration platform for API development

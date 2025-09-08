@@ -94,6 +94,20 @@ alias mkdir='mkdir -p'
 ###############
 
 
+#### NVIM CONFS ####
+alias v='nvim' # default Neovim config
+alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
+alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
+alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
+alias vl='NVIM_APPNAME=nvim-lunarvim nvim' # LunarVim
+vv() {
+  select config in lazyvim kickstart nvchad astrovim lunarvim
+  do NVIM_APPNAME=nvim-$config nvim $@; break; done
+}
+##################
+
+
 ##### VAR ENV #####
 # conf tmuxifier
 export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux-layouts"
@@ -122,20 +136,6 @@ export PG_BIN="$(brew --prefix libpq)/bin"
 export PYTHON_BIN="$(brew --prefix python)/libexec/bin"
 
 export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$GOBIN:$PG_BIN:$PYTHON_BIN:$PATH"
-##################
-
-
-#### NVIM CONFS ####
-alias v='nvim' # default Neovim config
-alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
-alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
-alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
-alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
-alias vl='NVIM_APPNAME=nvim-lunarvim nvim' # LunarVim
-vv() {
-  select config in lazyvim kickstart nvchad astrovim lunarvim
-  do NVIM_APPNAME=nvim-$config nvim $@; break; done
-}
 ##################
 
 

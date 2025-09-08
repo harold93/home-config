@@ -14,6 +14,7 @@ src/dot-config/tmux/plugins/
 src/dot-config/flutter/
 src/dot-config/htop/
 src/dot-config/nvm/
+src/dot-config/yarn/
 src/dot-local/bin/psrecord
 src/dot-local/pipx/
 src/dot-local/bin/git-filter-repo

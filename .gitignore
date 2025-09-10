@@ -15,6 +15,7 @@ src/dot-config/flutter/
 src/dot-config/htop/
 src/dot-config/nvm/
 src/dot-config/yarn/
+src/dot-config/configstore/
 src/dot-local/bin/psrecord
 src/dot-local/pipx/
 src/dot-local/bin/git-filter-repo

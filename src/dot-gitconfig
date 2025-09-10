@@ -3,7 +3,7 @@
     email = harmijoleon@gmail.com
 
 [core]
-    editor = nano
+    editor = nvim
     autocrlf = input
 
 [pull]

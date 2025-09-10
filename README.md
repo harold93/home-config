@@ -1,7 +1,8 @@
 
 ## Fresh install
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/harold93/home-config/refs/heads/macbook/setup.sh)"
+os="linux" # os branch (linux, macos)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/harold93/home-config/refs/heads/$os/setup.sh)"
 ```
 
 ## Update dotfiles

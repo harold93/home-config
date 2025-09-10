@@ -1,0 +1,57 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+############## Source code ###############
+# Install zinit if not already installed
+if [[ ! -f ~/.zinit/bin/zinit.zsh ]]; then
+  mkdir -p ~/.zinit/bin && \
+  git clone https://github.com/zdharma-continuum/zinit.git ~/.zinit/bin
+fi
+source ~/.zinit/bin/zinit.zsh
+
+### THEME
+# Powerlevel10k loads synchronously (prompt available instantly)
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+
+### PLUGINS (with turbo mode)
+# Syntax highlighting
+zinit ice wait lucid
+zinit light zdharma-continuum/fast-syntax-highlighting
+
+# Autosuggestions
+zinit ice wait lucid
+zinit light zsh-users/zsh-autosuggestions
+
+# Extra completions
+zinit ice wait lucid
+zinit light zsh-users/zsh-completions
+
+# Git plugin (from Oh My Zsh, but loaded via zinit)
+zinit ice wait lucid
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+
+# Zsh Vi Mode (enhanced vi keybindings with visual indicators)
+zinit ice wait lucid
+zinit light jeffreytse/zsh-vi-mode
+
+# Fzf integration (handy for searching through git logs, files, etc.)
+zinit ice wait lucid
+zinit light junegunn/fzf
+#####################################
+
+############ Source code ############
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#####################################
+
+
+
+############ Eval code ############
+# keychain - re-use ssh-agent and/or gpg-agent between logins
+eval $(keychain --eval id_ed25519)
+#####################################

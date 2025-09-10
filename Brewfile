@@ -138,6 +138,8 @@ cask "rubymine"
 cask "slack"
 # Music streaming service
 cask "spotify"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin@17"
 # Open-source code editor
 cask "visual-studio-code"
 mas "AdGuard for Safari", id: 1440147259

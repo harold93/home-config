@@ -121,6 +121,9 @@ export UV_USE_IO_URING=0
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
 [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
+export GRADLE_JAVA_HOME="$(/usr/libexec/java_home -v 17)"
 ###################
 
 
@@ -134,8 +137,10 @@ export YARN_GLOBAL_BIN="$HOME/.yarn/bin"
 export GOBIN="$(go env GOPATH)/bin"
 export PG_BIN="$(brew --prefix libpq)/bin"
 export PYTHON_BIN="$(brew --prefix python)/libexec/bin"
+export ANDROID_SDK_BIN="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin"
+export JAVA_BIN="$JAVA_HOME/bin"
 
-export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$GOBIN:$PG_BIN:$PYTHON_BIN:$PATH"
+export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$GOBIN:$PG_BIN:$PYTHON_BIN:$ANDROID_SDK_BIN:$JAVA_BIN:$PATH"
 ##################
 
 

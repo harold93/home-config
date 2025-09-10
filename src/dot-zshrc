@@ -53,5 +53,6 @@ zinit light junegunn/fzf
 
 ############ Eval code ############
 # keychain - re-use ssh-agent and/or gpg-agent between logins
-eval $(keychain --eval id_ed25519)
+eval $(keychain --eval id_ed25520)
+eval "$(zoxide init zsh)"
 #####################################

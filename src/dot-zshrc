@@ -1,0 +1,147 @@
+####### Source code #######
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# theme funcs
+source $(brew --prefix powerlevel10k)/share/powerlevel10k/powerlevel10k.zsh-theme
+# P10k promts
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# ruby custom env
+source $(brew --prefix chruby)/share/chruby/chruby.sh
+source $(brew --prefix chruby)/share/chruby/auto.sh
+# zsh autosuggestion source
+source $(brew --prefix zsh-autosuggestions)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# zsh hightlight
+source $(brew --prefix zsh-syntax-highlighting)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Fluter fvm completion scripts setup. Remove the following line to uninstall
+[[ -f $HOME/.dart-cli-completion/zsh-config.zsh ]] && . $HOME/.dart-cli-completion/zsh-config.zsh || true
+# Auto complete fzf
+source <(fzf --zsh)
+# Shell line editor vim-style
+source $(brew --prefix zsh-vi-mode)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+############################
+
+####### O-M-Z config #######
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+########################
+
+
+#### ALIASES ####
+alias  c='clear' # clear terminal
+alias  l='eza -lh  --icons=auto' # long list
+alias ls='eza -1   --icons=auto' # short list
+alias ll='eza -lha --icons=auto --group-directories-first --git' # long list all
+alias ld='eza -lhD --icons=auto' # long list dirs
+alias vc='code --ozone-platform-hint=wayland --disable-gpu' # gui code editor
+alias dc='docker-compose'
+alias vf='nvim $(fzf --preview="bat --color=always {}" -m)'
+alias k='kubectl'
+# Handy change dir shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+alias mkdir='mkdir -p'
+###############
+
+
+#### NVIM CONFS ####
+alias v='nvim' # default Neovim config
+alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
+alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
+alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
+alias vl='NVIM_APPNAME=nvim-lunarvim nvim' # LunarVim
+vv() {
+  select config in lazyvim kickstart nvchad astrovim lunarvim
+  do NVIM_APPNAME=nvim-$config nvim $@; break; done
+}
+##################
+
+
+##### VAR ENV #####
+# conf tmuxifier
+export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux-layouts"
+# def editor
+export EDITOR='nvim'
+# for flutter
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+# to avoid arch linux kernel 6.9.2-arch1-1 fail with yarn && node
+export UV_USE_IO_URING=0
+# Nvm (Node version manager)
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
+[ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+###################
+
+
+##### BIN PATH #####
+export TMUXIFIER_BIN="$HOME/.tmuxifier/bin"
+export CARGO_BIN="$HOME/.cargo/bin"
+export LOCAL_BIN="$HOME/.local/bin"
+export FLUTTER_PUB="$HOME/.pub-cache/bin"
+export ATUIN_BIN="$HOME/.atuin/bin"
+export YARN_GLOBAL_BIN="$HOME/.yarn/bin"
+export GOBIN="$(go env GOPATH)/bin"
+export PG_BIN="$(brew --prefix libpq)/bin"
+export PYTHON_BIN="$(brew --prefix python)/libexec/bin"
+
+export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$GOBIN:$PG_BIN:$PYTHON_BIN:$PATH"
+##################
+
+
+# keychain - re-use ssh-agent and/or gpg-agent between logins
+eval $(keychain --eval id_ed25519)
+eval "$(zoxide init zsh)"
+# FIXME: tmuxifier is not in part of homebrew, so throws an error when runnig the installation script
+# eval "$(tmuxifier init -)"
+eval "$(atuin init zsh)"

@@ -78,6 +78,8 @@ brew "nmap"
 brew "node"
 # Manage multiple Node.js versions
 brew "nvm"
+# Command-line client for OpenStack
+brew "openstackclient"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Theme for zsh

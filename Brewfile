@@ -8,6 +8,8 @@ tap "osx-cross/arm"
 tap "osx-cross/avr"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Password hashing library and CLI utility
+brew "argon2"
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
 # Tool for generating GNU Standards-compliant Makefiles

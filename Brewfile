@@ -1,4 +1,5 @@
 tap "cormacrelf/tap"
+tap "dopplerhq/cli"
 tap "felixkratz/formulae"
 tap "heroku/brew"
 tap "leoafarias/fvm"
@@ -43,6 +44,8 @@ brew "git-delta"
 brew "gitleaks"
 # Library for command-line editing
 brew "readline"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Kubernetes package manager
@@ -109,6 +112,8 @@ brew "zsh-syntax-highlighting"
 brew "zsh-vi-mode"
 # Watcher for macOS 10.14+ light/dark mode changes
 brew "cormacrelf/tap/dark-notify"
+# The official Doppler CLI for managing your secrets
+brew "dopplerhq/cli/doppler"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 # Simple cli to manage Flutter SDK versions per project

@@ -1,0 +1,11 @@
+modmap:
+  - name: Disable CapsLock
+    remap:
+      CapsLock: Ctrl_L
+keymap:
+  - name: Global
+    remap:
+      C-Shift-h: left
+      C-Shift-j: down
+      C-Shift-k: up
+      C-Shift-l: right

@@ -27,6 +27,15 @@ source <(fzf --zsh)
 source $(brew --prefix zsh-vi-mode)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 ############################
 
+####### Eval code #######
+# keychain - re-use ssh-agent and/or gpg-agent between logins
+eval $(keychain --eval id_ed25519)
+eval "$(zoxide init zsh)"
+# FIXME: tmuxifier is not in part of homebrew, so throws an error when runnig the installation script
+# eval "$(tmuxifier init -)"
+eval "$(atuin init zsh)"
+############################
+
 ####### O-M-Z config #######
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -143,10 +152,3 @@ export JAVA_BIN="$JAVA_HOME/bin"
 export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$GOBIN:$PG_BIN:$PYTHON_BIN:$ANDROID_SDK_BIN:$JAVA_BIN:$PATH"
 ##################
 
-
-# keychain - re-use ssh-agent and/or gpg-agent between logins
-eval $(keychain --eval id_ed25519)
-eval "$(zoxide init zsh)"
-# FIXME: tmuxifier is not in part of homebrew, so throws an error when runnig the installation script
-# eval "$(tmuxifier init -)"
-eval "$(atuin init zsh)"

@@ -1,3 +1,4 @@
+############## Cache section ###############
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,14 +6,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-############## Plugin section ###############
 # Install zinit if not already installed
 if [[ ! -f ~/.zinit/bin/zinit.zsh ]]; then
   mkdir -p ~/.zinit/bin && \
   git clone https://github.com/zdharma-continuum/zinit.git ~/.zinit/bin
 fi
 source ~/.zinit/bin/zinit.zsh
+##########################################
 
+########################################
+#            BEGIN HERE                #
+########################################
+
+############## Plugin section ###############
 # Powerlevel10k loads synchronously (prompt available instantly)
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
@@ -40,10 +46,6 @@ zinit light jeffreytse/zsh-vi-mode
 # Fzf integration (handy for searching through git logs, files, etc.)
 zinit ice wait lucid
 zinit light junegunn/fzf
-#####################################
-
-########################################
-#            BEGIN HERE                #
 ########################################
 
 ############ Source code ############

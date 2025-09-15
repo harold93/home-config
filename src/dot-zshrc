@@ -51,6 +51,12 @@ zinit light junegunn/fzf
 ############ Source code ############
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Chruby
+if [ -n "$BASH_VERSION" ] || [ -n "$ZSH_VERSION" ]; then
+  source /usr/share/chruby/chruby.sh
+  source /usr/share/chruby/auto.sh
+fi
 #####################################
 
 ############ Eval code ############

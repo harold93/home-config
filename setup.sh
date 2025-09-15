@@ -35,6 +35,8 @@ sudo dnf install slack-repo
 sudo dnf copr enable blakegardner/xremap
 # Some bins like eza, lazygit, yazi etc
 sudo dnf copr enable nclundell/fedora-extras
+# chruby
+sudo dnf copr enable duritong/chruby
 
 ######## Enable xremap to run without sudo
 # add to group input

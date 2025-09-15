@@ -99,6 +99,7 @@ alias ld='eza -lhD --icons=auto' # long list dirs
 alias dc='docker-compose'
 alias vf='nvim $(fzf --preview="bat --color=always {}" -m)'
 alias k='kubectl'
+alias kube-merge='KUBECONFIG=$(ls ~/.kube/configs/* | tr "\n" ":") kubectl config view --merge --flatten > ~/.kube/config'
 ###############
 
 

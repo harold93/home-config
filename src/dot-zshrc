@@ -59,3 +59,63 @@ eval $(keychain --eval id_ed25519)
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 #####################################
+
+########### ALIASES ###########
+# Handy change dir shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+alias mkdir='mkdir -p'
+alias  c='clear' # clear terminal
+alias  l='eza -lh  --icons=auto' # long list
+alias ls='eza -1   --icons=auto' # short list
+alias ll='eza -lha --icons=auto --group-directories-first --git' # long list all
+alias ld='eza -lhD --icons=auto' # long list dirs
+alias dc='docker-compose'
+alias vf='nvim $(fzf --preview="bat --color=always {}" -m)'
+alias k='kubectl'
+# TODO: to check
+# alias vc='code --ozone-platform-hint=wayland --disable-gpu' # gui code editor
+###############################
+
+
+####### NVIM CONFS #######
+alias v='nvim' # default Neovim config
+alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
+alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
+alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
+alias vl='NVIM_APPNAME=nvim-lunarvim nvim' # LunarVim
+vv() {
+  select config in lazyvim kickstart nvchad astrovim lunarvim
+  do NVIM_APPNAME=nvim-$config nvim $@; break; done
+}
+#########################
+
+
+############ VAR ENV ###########
+# conf tmuxifier
+export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux-layouts"
+# def editor
+export EDITOR='nvim'
+# TODO: check, for flutter
+# export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+# TODO: check, to avoid arch linux kernel 6.9.2-arch1-1 fail with yarn && node
+export UV_USE_IO_URING=0
+# Nvm (Node version manager)
+###############################
+
+
+########## BIN PATH #########
+export LOCAL_BIN="$HOME/.local/bin"
+# TODO: installed ?
+# export TMUXIFIER_BIN="$HOME/.tmuxifier/bin"
+export FLUTTER_PUB="$HOME/.pub-cache/bin"
+export YARN_GLOBAL_BIN="$HOME/.yarn/bin"
+
+export PATH="$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$YARN_GLOBAL_BIN:$PATH"
+#############################
+

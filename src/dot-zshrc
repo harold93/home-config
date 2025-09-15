@@ -83,15 +83,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 #### ALIASES ####
-alias  c='clear' # clear terminal
-alias  l='eza -lh  --icons=auto' # long list
-alias ls='eza -1   --icons=auto' # short list
-alias ll='eza -lha --icons=auto --group-directories-first --git' # long list all
-alias ld='eza -lhD --icons=auto' # long list dirs
-alias vc='code --ozone-platform-hint=wayland --disable-gpu' # gui code editor
-alias dc='docker-compose'
-alias vf='nvim $(fzf --preview="bat --color=always {}" -m)'
-alias k='kubectl'
 # Handy change dir shortcuts
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -100,6 +91,14 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
+alias  c='clear' # clear terminal
+alias  l='eza -lh  --icons=auto' # long list
+alias ls='eza -1   --icons=auto' # short list
+alias ll='eza -lha --icons=auto --group-directories-first --git' # long list all
+alias ld='eza -lhD --icons=auto' # long list dirs
+alias dc='docker-compose'
+alias vf='nvim $(fzf --preview="bat --color=always {}" -m)'
+alias k='kubectl'
 ###############
 
 
@@ -122,10 +121,6 @@ vv() {
 export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux-layouts"
 # def editor
 export EDITOR='nvim'
-# for flutter
-export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
-# to avoid arch linux kernel 6.9.2-arch1-1 fail with yarn && node
-export UV_USE_IO_URING=0
 # Nvm (Node version manager)
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
@@ -141,7 +136,6 @@ export TMUXIFIER_BIN="$HOME/.tmuxifier/bin"
 export CARGO_BIN="$HOME/.cargo/bin"
 export LOCAL_BIN="$HOME/.local/bin"
 export FLUTTER_PUB="$HOME/.pub-cache/bin"
-export ATUIN_BIN="$HOME/.atuin/bin"
 export YARN_GLOBAL_BIN="$HOME/.yarn/bin"
 export GOBIN="$(go env GOPATH)/bin"
 export PG_BIN="$(brew --prefix libpq)/bin"
@@ -149,6 +143,6 @@ export PYTHON_BIN="$(brew --prefix python)/libexec/bin"
 export ANDROID_SDK_BIN="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin"
 export JAVA_BIN="$JAVA_HOME/bin"
 
-export PATH="$CARGO_BIN:$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$GOBIN:$PG_BIN:$PYTHON_BIN:$ANDROID_SDK_BIN:$JAVA_BIN:$PATH"
+export PATH="$TMUXIFIER_BIN:$CARGO_BIN:$LOCAL_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$GOBIN:$PG_BIN:$PYTHON_BIN:$ANDROID_SDK_BIN:$JAVA_BIN:$PATH"
 ##################
 

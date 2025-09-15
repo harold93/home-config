@@ -17,6 +17,7 @@ cd ~/code/pers
 git clone -b macbook https://github.com/harold93/home-config.git
 cd ~/code/pers/home-config
 
+# to dump the file: brew bundle dump --force --describe --file=Brewfile
 brew bundle
 
 mv ~/.zshrc ~/.zshrc.bak

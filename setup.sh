@@ -16,8 +16,13 @@ sudo dnf install dnf-plugins-core
 ######## Install third-party (but trusted) repo
 sudo dnf install fedora-workstation-repositories
 
+######## Add docker official repo 
+sudo dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
+ https://download.docker.com/linux/fedora/docker-ce.repo
+
 ######## With dnf we can no longer enable third-party repo via dnf, so we do it manually
 sudo sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/google-chrome.repo
+sudo sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/docker-ce.repo 
 
 ######## COPR (Cool Other Package Repositories) system, which hosts community-maintained packages.
 # enable sneexy copr repo zen browser
@@ -47,6 +52,12 @@ echo 'Xremap without sudo settled, you may need to reboot'
 
 ######## Install dump file
 
+####### After deps Install
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo groupadd docker || echo 'docker group already exist'
+sudo usermod -aG docker $USER
+newgrp docker
 
 ######## Apply dotfiles
 [ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak

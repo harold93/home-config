@@ -139,6 +139,7 @@ cifs-utils-info
 cirrus-audio-firmware
 cjson
 cmake-filesystem
+code
 codec2
 color-filesystem
 colord

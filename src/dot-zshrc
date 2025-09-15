@@ -77,6 +77,7 @@ alias ld='eza -lhD --icons=auto' # long list dirs
 alias dc='docker-compose'
 alias vf='nvim $(fzf --preview="bat --color=always {}" -m)'
 alias k='kubectl'
+alias kube-merge='KUBECONFIG=$(ls ~/.kube/configs/* | tr "\n" ":") kubectl config view --merge --flatten > ~/.kube/config'
 # TODO: to check
 # alias vc='code --ozone-platform-hint=wayland --disable-gpu' # gui code editor
 ###############################

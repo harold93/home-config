@@ -34,7 +34,9 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /usr/share/backgrounds/default.jxl fill
+output * bg $HOME/.config/backgrounds/building.jpg fill
+output * mode 1920x1200
+output * scale 1.1
 #
 # Example configuration:
 #
@@ -68,6 +70,11 @@ output * bg /usr/share/backgrounds/default.jxl fill
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+input type:touchpad {
+    tap enabled
+    click_method clickfinger
+    natural_scroll enabled # optional, like MacBooks
+}
 
 ### Key bindings
 #

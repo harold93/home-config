@@ -57,11 +57,15 @@ echo 'Xremap without sudo settled, you may need to reboot'
 sudo dnf install $(< packages-list.txt)
 
 ####### After deps Install
+# docker sudoless
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo groupadd docker || echo 'docker group already exist'
 sudo usermod -aG docker $USER
 newgrp docker
+# tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source ~/.config/tmux/tmux.conf
 
 ######## Apply dotfiles
 [ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak

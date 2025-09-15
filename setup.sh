@@ -53,6 +53,8 @@ echo 'Xremap without sudo settled, you may need to reboot'
 
 
 ######## Install dump file
+# to dump the file: dnf repoquery --installed --qf "%{name}\n" > packages-list.txt
+sudo dnf install $(< packages-list.txt)
 
 ####### After deps Install
 sudo systemctl enable docker

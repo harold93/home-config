@@ -24,9 +24,12 @@ sudo sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/google-chrome.repo
 sudo dnf copr enable sneexy/zen-browser
 # slack copr
 sudo dnf copr enable rocketraman/slack-repo
+# download slack repository in /etc/yum.repos.d/
 sudo dnf install slack-repo
 # xremap to remap keyboard
 sudo dnf copr enable blakegardner/xremap
+# Some bins like eza, lazygit, yazi etc
+sudo dnf copr enable nclundell/fedora-extras
 
 ######## Enable xremap to run without sudo
 # add to group input

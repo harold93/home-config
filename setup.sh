@@ -7,7 +7,7 @@ sudo dnf install -y git
 cd ~/
 mkdir -p code/pers
 cd ~/code/pers
-git clone -b macbook https://github.com/harold93/home-config.git
+git clone -b linux https://github.com/harold93/home-config.git
 cd ~/code/pers/home-config
 
 ######## Enable dnf features

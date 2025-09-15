@@ -19,6 +19,7 @@ sudo dnf install fedora-workstation-repositories
 ######## Add docker official repo 
 sudo dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
  https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf config-manager addrepo --from-repofile=https://packages.microsoft.com/yumrepos/vscode/config.repo
 
 ######## With dnf we can no longer enable third-party repo via dnf, so we do it manually
 sudo sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/google-chrome.repo

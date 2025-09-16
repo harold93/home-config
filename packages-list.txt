@@ -524,6 +524,7 @@ gvfs-smb
 gzip
 harfbuzz
 harfbuzz-icu
+helm
 hfsplus-tools
 hicolor-icon-theme
 hidapi

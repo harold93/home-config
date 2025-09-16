@@ -46,6 +46,8 @@ sudo dnf copr enable blakegardner/xremap
 sudo dnf copr enable nclundell/fedora-extras
 # chruby
 sudo dnf copr enable duritong/chruby
+# kubectx
+sudo dnf copr enable buckaroogeek/k8s-utils
 
 ######## Enable xremap to run without sudo
 # add to group input

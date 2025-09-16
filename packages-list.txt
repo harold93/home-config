@@ -621,6 +621,7 @@ kmod-libs
 kpartx
 krb5-libs
 kubectl
+kubectx
 lame-libs
 langpacks-core-en
 langpacks-en

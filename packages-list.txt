@@ -620,6 +620,7 @@ kmod
 kmod-libs
 kpartx
 krb5-libs
+kubectl
 lame-libs
 langpacks-core-en
 langpacks-en

@@ -20,6 +20,14 @@ sudo dnf install fedora-workstation-repositories
 sudo dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
  https://download.docker.com/linux/fedora/docker-ce.repo
 sudo dnf config-manager addrepo --from-repofile=https://packages.microsoft.com/yumrepos/vscode/config.repo
+cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.34/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.34/rpm/repodata/repomd.xml.key
+EOF
 
 ######## With dnf we can no longer enable third-party repo via dnf, so we do it manually
 sudo sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/google-chrome.repo

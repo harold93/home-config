@@ -358,6 +358,7 @@ fribidi
 fstrm
 fuse
 fuse-common
+fuse-libs
 fuse-overlayfs
 fuse3
 fuse3-libs

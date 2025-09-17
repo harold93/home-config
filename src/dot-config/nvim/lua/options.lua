@@ -13,6 +13,7 @@ vim.cmd("set smartindent")
 vim.cmd("set cindent")
 
 vim.cmd("set scrolloff=5")
+vim.cmd("set sidescrolloff=5")
 -- For mac true color
 vim.cmd("set termguicolors")
 
@@ -68,8 +69,8 @@ vim.keymap.set("v", "˚", ":m '<-2<CR>gv=gv", { desc = "move line up" })
 vim.keymap.set("n", "<leader>e", ":Ex<CR>", { desc = "open explorer page" })
 
 -- scroll
-vim.keymap.set("n", "<C-d>", "25<C-d>", { desc = "scroll down reduced" })
-vim.keymap.set("n", "<C-u>", "25<C-u>", { desc = "scroll up reduced" })
+vim.keymap.set("n", "<C-d>", "15<C-d>", { desc = "scroll down reduced" })
+vim.keymap.set("n", "<C-u>", "15<C-u>", { desc = "scroll up reduced" })
 
 -- neovide config
 if vim.g.neovide then

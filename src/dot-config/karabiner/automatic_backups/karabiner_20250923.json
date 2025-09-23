@@ -5,22 +5,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "control+[ to esc",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "escape" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Change right_control+hjkl to arrow keys",
                         "manipulators": [
                             {

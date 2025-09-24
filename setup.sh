@@ -77,6 +77,11 @@ newgrp docker
 # tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.config/tmux/tmux.conf
+# ruby
+# FIXME: 404 error
+ruby-install ruby 3.4.1
+# toolbox jetbrains
+# TODO: curl toolbox app and run it 
 
 ######## Apply dotfiles
 [ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak

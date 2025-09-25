@@ -9,3 +9,4 @@ keymap:
       C-Shift-j: down
       C-Shift-k: up
       C-Shift-l: right
+      C-LEFTBRACE: ESC

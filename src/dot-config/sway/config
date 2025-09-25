@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Exec on Start
-exec bash -c 'xremap --watch=device ~/.config/xremap/config.yml'
+exec_always bash -c 'xremap --watch=device ~/.config/xremap/config.yml'
 
 ### Variables
 #

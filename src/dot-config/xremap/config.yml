@@ -10,3 +10,9 @@ keymap:
       C-Shift-k: up
       C-Shift-l: right
       C-LEFTBRACE: ESC
+      C-n: down
+      C-p: up
+      C-Shift-n: C-Shift-n
+      C-Shift-p: C-Shift-p
+      C-Shift-Alt-n: C-Shift-Alt-n
+      C-Shift-Alt-p: C-Shift-Alt-p

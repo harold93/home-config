@@ -56,6 +56,8 @@ brew "helm"
 brew "htop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Modern load testing tool, using Go and JavaScript
+brew "k6"
 # User-friendly front-end to ssh-agent(1)
 brew "keychain"
 # Kubernetes command-line interface
@@ -76,7 +78,7 @@ brew "ncdu"
 brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Manage multiple Node.js versions
 brew "nvm"
@@ -131,6 +133,8 @@ cask "arc"
 # Voice and text chat software
 cask "discord"
 cask "font-source-code-pro-for-powerline"
+# Web browser
+cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Keyboard customiser
@@ -152,6 +156,7 @@ cask "temurin@17"
 # Open-source code editor
 cask "visual-studio-code"
 mas "AdGuard for Safari", id: 1440147259
+mas "Numbers", id: 409203825
 mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "ahmadawais.shades-of-purple"

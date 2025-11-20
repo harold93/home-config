@@ -67,6 +67,10 @@ echo 'Xremap without sudo settled, you may need to reboot'
 # to dump the file: dnf repoquery --installed --qf "%{name}\n" > packages-list.txt
 sudo dnf install $(< packages-list.txt)
 
+######## Apply dotfiles
+[ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
+stow .
+
 ####### After deps Install
 # docker sudoless
 sudo systemctl enable docker
@@ -83,6 +87,3 @@ ruby-install ruby 3.4.1
 # toolbox jetbrains
 # TODO: curl toolbox app and run it 
 
-######## Apply dotfiles
-[ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
-stow .

@@ -109,6 +109,10 @@ vv() {
 
 
 ############ VAR ENV ###########
+# Java home by temurin
+export JAVA_HOME="/usr/lib/jvm/temurin-17-jdk"
+# Android home
+ANDROID_HOME="/home/harold/Android/Sdk"
 # conf tmuxifier
 export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux-layouts"
 # def editor

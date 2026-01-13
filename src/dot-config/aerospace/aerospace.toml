@@ -254,6 +254,7 @@ exec-on-workspace-change = [
 [workspace-to-monitor-force-assignment]
     T = 'secondary' # Non-main monitor in case when there are only two monitors
     E = 'secondary' # Non-main monitor in case when there are only two monitors
+    R = 'secondary' # Non-main monitor in case when there are only two monitors
     8 = 'secondary' # Non-main monitor in case when there are only two monitors
     9 = 'secondary' # Non-main monitor in case when there are only two monitors
 

@@ -53,13 +53,11 @@ exec-on-workspace-change = [
       open -a 'Rubymine'
       ;;
     A)
+      open -a 'Simulator'
       open -a 'Android Studio'
       ;;
     T)
       open -a 'kitty'
-      ;;
-    E)
-      open -a 'Simulator'
       ;;
     C)
       open -a 'Visual Studio Code'
@@ -155,7 +153,7 @@ exec-on-workspace-change = [
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+    alt-a = 'workspace A'
     alt-b = 'workspace B'
     alt-c = 'workspace C'
     alt-d = 'workspace D'
@@ -241,7 +239,7 @@ exec-on-workspace-change = [
 
 [[on-window-detected]]
     if.app-id = 'com.apple.iphonesimulator'
-    run = ['move-node-to-workspace E']
+    run = ['move-node-to-workspace A']
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.VSCode'

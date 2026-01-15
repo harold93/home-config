@@ -56,7 +56,7 @@ exec-on-workspace-change = [
       open -a 'Simulator'
       open -a 'Android Studio'
       ;;
-    T)
+    D)
       open -a 'kitty'
       ;;
     C)
@@ -235,7 +235,7 @@ exec-on-workspace-change = [
 
 [[on-window-detected]]
     if.app-id = 'net.kovidgoyal.kitty'
-    run = ['move-node-to-workspace T']
+    run = ['move-node-to-workspace D']
 
 [[on-window-detected]]
     if.app-id = 'com.apple.iphonesimulator'
@@ -252,7 +252,7 @@ exec-on-workspace-change = [
 [workspace-to-monitor-force-assignment]
     S = 'secondary' # Non-main monitor in case when there are only two monitors
     R = 'secondary' # Non-main monitor in case when there are only two monitors
-    T = 'secondary' # Non-main monitor in case when there are only two monitors
+    D = 'secondary' # Non-main monitor in case when there are only two monitors
     E = 'secondary' # Non-main monitor in case when there are only two monitors
     8 = 'secondary' # Non-main monitor in case when there are only two monitors
     9 = 'secondary' # Non-main monitor in case when there are only two monitors

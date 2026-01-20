@@ -127,11 +127,15 @@ brew "heroku/brew/heroku"
 # Simple cli to manage Flutter SDK versions per project
 brew "leoafarias/fvm/fvm"
 # AeroSpace is an i3-like tiling window manager for macOS
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 # Tools for building Android applications
 cask "android-studio"
 # Chromium based browser
 cask "arc"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Web browser with integrated AI assistant
+cask "comet"
 # Voice and text chat software
 cask "discord"
 cask "font-source-code-pro-for-powerline"

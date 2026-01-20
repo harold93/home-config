@@ -161,6 +161,8 @@ cask "spotify"
 cask "temurin@17"
 # Open-source code editor
 cask "visual-studio-code"
+# Native desktop client for WhatsApp
+cask "whatsapp"
 mas "AdGuard for Safari", id: 1440147259
 mas "Numbers", id: 409203825
 mas "Xcode", id: 497799835

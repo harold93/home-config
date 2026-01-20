@@ -46,6 +46,15 @@ exec-on-workspace-change = [
     1)
       open -a 'Arc'
       ;;
+    2)
+      open -a 'Comet'
+      ;;
+    3)
+      open -a 'ChatGPT'
+      ;;
+    4)
+      open -a 'Google Gemini'
+      ;;
     S)
       open -a 'Slack'
       ;;
@@ -220,6 +229,18 @@ exec-on-workspace-change = [
 [[on-window-detected]]
     if.app-id = 'company.thebrowser.Browser'
     run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+    if.app-id = 'ai.perplexity.comet'
+    run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+    if.app-id = 'com.openai.chat'
+    run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome.app.lbneikkiodgjddaaeedphegfkehhpnjg'
+    run = ['move-node-to-workspace 4']
 
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'

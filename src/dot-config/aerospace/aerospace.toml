@@ -50,10 +50,10 @@ exec-on-workspace-change = [
       open -a 'Comet'
       ;;
     3)
-      open -a 'ChatGPT'
+      open -a 'Google Gemini'
       ;;
     4)
-      open -a 'Google Gemini'
+      open -a 'ChatGPT'
       ;;
     S)
       open -a 'Slack'
@@ -235,11 +235,11 @@ exec-on-workspace-change = [
     run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
-    if.app-id = 'com.openai.chat'
+    if.app-id = 'com.google.Chrome.app.lbneikkiodgjddaaeedphegfkehhpnjg'
     run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
-    if.app-id = 'com.google.Chrome.app.lbneikkiodgjddaaeedphegfkehhpnjg'
+    if.app-id = 'com.openai.chat'
     run = ['move-node-to-workspace 4']
 
 [[on-window-detected]]

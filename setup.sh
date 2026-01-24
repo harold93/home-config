@@ -57,7 +57,7 @@ sudo dnf copr enable blakegardner/xremap
 # Some bins like eza, lazygit, yazi etc
 sudo dnf copr enable nclundell/fedora-extras
 # chruby
-sudo dnf copr enable duritong/chruby
+sudo dnf copr enable gschlager/ruby
 # kubectx
 sudo dnf copr enable buckaroogeek/k8s-utils
 
@@ -98,8 +98,9 @@ newgrp docker
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.config/tmux/tmux.conf
 # ruby
-# FIXME: 404 error
-ruby-install ruby 3.4.1
+ruby-install ruby 3.4.8
 # toolbox jetbrains
 # TODO: curl toolbox app and run it 
+# android studio
+# TODO: needed ?
 

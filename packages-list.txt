@@ -258,6 +258,7 @@ default-fonts-vi
 default-fonts-xh
 default-fonts-yi
 default-fonts-zu
+dejavu-sans-fonts
 deltarpm
 desktop-backgrounds-compat
 desktop-file-utils
@@ -316,6 +317,7 @@ expat
 eza
 f2fs-tools
 f42-backgrounds-base
+faad2-libs
 fcft
 fdk-aac-free
 fedora-bookmarks
@@ -340,7 +342,10 @@ firewalld
 firewalld-filesystem
 flac-libs
 flashrom
+flatpak
 flatpak-libs
+flatpak-selinux
+flatpak-session-helper
 flite
 fmt
 fontawesome-6-brands-fonts
@@ -383,6 +388,7 @@ gdbm-devel
 gdbm-libs
 gdk-pixbuf2
 gdk-pixbuf2-modules
+gdk-pixbuf2-modules-extra
 geoclue2
 geolite2-city
 geolite2-country
@@ -391,7 +397,7 @@ gettext-libs
 gettext-runtime
 gfs2-utils
 ghostscript
-ghostscript-tools-fonts
+ghostscript-tools-fontutils
 ghostscript-tools-printing
 giflib
 git
@@ -408,11 +414,14 @@ glibmm2.4
 glibmm2.68
 glx-utils
 gmp
+gmp-c++
+gmp-devel
 gnome-abrt
 gnome-disk-utility
 gnome-keyring
 gnome-keyring-pam
 gnome-themes-extra
+gnulib-l10n
 gnupg2
 gnupg2-smime
 gnutls
@@ -475,6 +484,7 @@ google-noto-serif-thai-vf-fonts
 google-noto-serif-vf-fonts
 gpgme
 gpgmepp
+gpsd-libs
 graphene
 graphite2
 graphviz-libs
@@ -579,6 +589,7 @@ isomd5sum
 iw
 iwlegacy-firmware
 iwlwifi-dvm-firmware
+iwlwifi-mld-firmware
 iwlwifi-mvm-firmware
 jansson
 jasper-libs
@@ -771,6 +782,7 @@ libfontenc
 libfprint
 libfsverity
 libftdi
+libfyaml
 libgcc
 libgcrypt
 libgexiv2
@@ -949,6 +961,7 @@ libunwind
 liburing
 libusb1
 libusbmuxd
+libuser
 libutempter
 libuuid
 libuv
@@ -1048,6 +1061,7 @@ mkpasswd
 mobile-broadband-provider-info
 mokutil
 mozilla-filesystem
+mozilla-openh264
 mpage
 mpdecimal
 mpfr
@@ -1082,7 +1096,6 @@ nodejs-docs
 nodejs-full-i18n
 nodejs-libs
 nodejs-npm
-noopenh264
 npth
 nspr
 nss
@@ -1109,6 +1122,7 @@ openal-soft
 openconnect
 opencore-amr
 openexr-libs
+openh264
 openjpeg
 openldap
 openpace
@@ -1128,6 +1142,8 @@ osinfo-db
 osinfo-db-tools
 ostree-libs
 p11-kit
+p11-kit-client
+p11-kit-server
 p11-kit-trust
 p7zip-plugins
 paktype-naskh-basic-fonts
@@ -1264,6 +1280,8 @@ poppler-data
 poppler-glib
 poppler-utils
 popt
+postgresql-private-devel
+postgresql-private-libs
 ppp
 pptp
 prefixdevname
@@ -1366,6 +1384,7 @@ python3-urllib3+socks
 python3-websockets
 python3-xkbregistry
 python3-xlib
+qcom-wwan-firmware
 qemu-guest-agent
 qpdf-libs
 qrencode-libs
@@ -1413,6 +1432,7 @@ satyr
 sdbus-cpp
 sddm
 sddm-wayland-sway
+sdl12-compat
 sdl2-compat
 sed
 selinux-policy
@@ -1494,7 +1514,11 @@ tcl
 tcpdump
 teamd
 tecla
+temurin-17-jdk
+tesseract-common
+tesseract-langpack-eng
 tesseract-libs
+tesseract-tessdata-doc
 thunar-archive-plugin
 time
 tinysparql
@@ -1538,6 +1562,7 @@ usb_modeswitch
 usb_modeswitch-data
 usbmuxd
 usbutils
+usermode
 userspace-rcu
 utf8proc
 util-linux
@@ -1558,7 +1583,6 @@ waybar
 webkit2gtk4.1
 webp-pixbuf-loader
 webrtc-audio-processing
-wev
 wget2
 wget2-libs
 wget2-wget
@@ -1571,6 +1595,7 @@ wireplumber-libs
 wl-clipboard
 wlr-randr
 wlroots
+wlroots0.18
 wlsunset
 woff2
 words
@@ -1616,10 +1641,9 @@ xvidcore
 xxhash-libs
 xz
 xz-libs
+yarnpkg
 yt-dlp
 yt-dlp+default
-yt-dlp-bash-completion
-yt-dlp-zsh-completion
 zchunk-libs
 zen-browser
 zenity

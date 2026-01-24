@@ -130,8 +130,7 @@ export LOCAL_BIN="$HOME/.local/bin"
 # TODO: installed ?
 # export TMUXIFIER_BIN="$HOME/.tmuxifier/bin"
 export FLUTTER_PUB="$HOME/.pub-cache/bin"
-export YARN_GLOBAL_BIN="$HOME/.yarn/bin"
 
-export PATH="$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$YARN_GLOBAL_BIN:$PATH"
+export PATH="$LOCAL_BIN:$TMUXIFIER_BIN:$FLUTTER_PUB:$PATH"
 #############################
 

@@ -19,6 +19,8 @@ sudo dnf install fedora-workstation-repositories
 ######## Add docker official repo 
 sudo dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
  https://download.docker.com/linux/fedora/docker-ce.repo
+
+######## Add repo vscode
 sudo dnf config-manager addrepo --from-repofile=https://packages.microsoft.com/yumrepos/vscode/config.repo
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
@@ -27,6 +29,16 @@ baseurl=https://pkgs.k8s.io/core:/stable:/v1.34/rpm/
 enabled=1
 gpgcheck=1
 gpgkey=https://pkgs.k8s.io/core:/stable:/v1.34/rpm/repodata/repomd.xml.key
+EOF
+
+######## Add repo temurin
+cat <<EOF | sudo tee /etc/yum.repos.d/adoptium.repo
+[Adoptium]
+name=Adoptium
+baseurl=https://packages.adoptium.net/artifactory/rpm/fedora/\$releasever/\$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.adoptium.net/artifactory/api/gpg/key/public
 EOF
 
 ######## With dnf we can no longer enable third-party repo via dnf, so we do it manually
@@ -65,7 +77,11 @@ echo 'Xremap without sudo settled, you may need to reboot'
 
 ######## Install dump file
 # to dump the file: dnf repoquery --installed --qf "%{name}\n" > packages-list.txt
+sudo dnf update
 sudo dnf install $(< packages-list.txt)
+
+######## Install Flatpack
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 ######## Apply dotfiles
 [ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak

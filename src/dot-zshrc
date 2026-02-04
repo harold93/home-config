@@ -137,13 +137,12 @@ export TMUXIFIER_BIN="$HOME/.tmuxifier/bin"
 export CARGO_BIN="$HOME/.cargo/bin"
 export LOCAL_BIN="$HOME/.local/bin"
 export FLUTTER_PUB="$HOME/.pub-cache/bin"
-export YARN_GLOBAL_BIN="$HOME/.yarn/bin"
 export GOBIN="$(go env GOPATH)/bin"
 export PG_BIN="$(brew --prefix libpq)/bin"
 export PYTHON_BIN="$(brew --prefix python)/libexec/bin"
 export ANDROID_SDK_BIN="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin"
 export JAVA_BIN="$JAVA_HOME/bin"
 
-export PATH="$TMUXIFIER_BIN:$CARGO_BIN:$LOCAL_BIN:$FLUTTER_PUB:$ATUIN_BIN:$YARN_GLOBAL_BIN:$GOBIN:$PG_BIN:$PYTHON_BIN:$ANDROID_SDK_BIN:$JAVA_BIN:$PATH"
+export PATH="$TMUXIFIER_BIN:$CARGO_BIN:$LOCAL_BIN:$FLUTTER_PUB:$ATUIN_BIN:$GOBIN:$PG_BIN:$PYTHON_BIN:$ANDROID_SDK_BIN:$JAVA_BIN:$PATH"
 ##################
 

@@ -106,8 +106,6 @@ brew "tpm"
 brew "vips"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
-# JavaScript package manager
-brew "yarn"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # Shell extension to navigate your filesystem faster

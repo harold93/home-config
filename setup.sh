@@ -99,8 +99,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.config/tmux/tmux.conf
 # ruby
 ruby-install ruby 3.4.8
-# toolbox jetbrains
-# TODO: curl toolbox app and run it 
-# android studio
-# TODO: needed ?
 
+# TODO: toolbox jetbrains ? curl toolbox app and run it 
+# TODO: android studio
+# TODO: flutter, fvm

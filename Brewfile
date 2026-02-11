@@ -58,6 +58,8 @@ brew "gnupg"
 brew "go"
 # Kubernetes package manager
 brew "helm"
+# Deploy Kubernetes Helm Charts
+brew "helmfile"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor

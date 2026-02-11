@@ -23,6 +23,10 @@ brew bundle
 mv ~/.zshrc ~/.zshrc.bak
 stow .
 
+###################
+## After install ##
+###################
+
 # to be compatible with aerospace, we need these settings
 defaults write com.apple.dock expose-group-apps -bool true && killall Dock
 defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
@@ -36,3 +40,6 @@ ruby-install ruby 3.4.1
 
 # setup background services at login
 brew services start colima
+
+# helm custom plugin
+helm plugin install https://github.com/databus23/helm-diff --verify=false

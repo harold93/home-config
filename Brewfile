@@ -58,8 +58,6 @@ brew "gnupg"
 brew "go"
 # Kubernetes package manager
 brew "helm"
-# Deploy Kubernetes Helm Charts
-brew "helmfile"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
@@ -80,6 +78,8 @@ brew "libpq"
 brew "libyaml"
 # Mac App Store command-line interface
 brew "mas"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # NCurses Disk Usage
 brew "ncdu"
 # Ambitious Vim-fork focused on extensibility and agility

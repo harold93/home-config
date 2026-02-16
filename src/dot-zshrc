@@ -34,6 +34,7 @@ eval "$(zoxide init zsh)"
 # FIXME: tmuxifier is not in part of homebrew, so throws an error when runnig the installation script
 # eval "$(tmuxifier init -)"
 eval "$(atuin init zsh)"
+eval "$(mise activate zsh)"
 ############################
 
 ####### O-M-Z config #######

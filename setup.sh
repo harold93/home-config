@@ -101,6 +101,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.config/tmux/tmux.conf
 # ruby
 ruby-install ruby 3.4.8
+# heml plugins
+helm plugin install https://github.com/databus23/helm-diff --verify=false
 
 # TODO: toolbox jetbrains ? curl toolbox app and run it 
 # TODO: android studio

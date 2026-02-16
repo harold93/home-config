@@ -1057,6 +1057,7 @@ mesa-va-drivers
 mesa-vulkan-drivers
 microcode_ctl
 minicom
+mise
 mkpasswd
 mobile-broadband-provider-info
 mokutil
@@ -1280,6 +1281,7 @@ poppler-data
 poppler-glib
 poppler-utils
 popt
+postgresql
 postgresql-private-devel
 postgresql-private-libs
 ppp

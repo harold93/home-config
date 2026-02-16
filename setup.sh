@@ -60,6 +60,8 @@ sudo dnf copr enable nclundell/fedora-extras
 sudo dnf copr enable gschlager/ruby
 # kubectx
 sudo dnf copr enable buckaroogeek/k8s-utils
+# mise en place
+sudo dnf copr enable jdxcode/mise
 
 ######## Enable xremap to run without sudo
 # add to group input

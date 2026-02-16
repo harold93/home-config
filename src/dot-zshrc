@@ -46,6 +46,12 @@ zinit light jeffreytse/zsh-vi-mode
 # Fzf integration (handy for searching through git logs, files, etc.)
 zinit ice wait lucid
 zinit light junegunn/fzf
+
+# Mise completions
+zinit ice as"completion" has"mise" run-atpull \
+    atclone"mise completion zsh > _mise" \
+    atpull"%atclone"
+zinit light zdharma-continuum/null
 ########################################
 
 ############ Source code ############
@@ -64,6 +70,7 @@ fi
 eval $(keychain --eval id_ed25519)
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
+eval "$(mise activate zsh)"
 #####################################
 
 ########### ALIASES ###########

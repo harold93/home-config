@@ -126,7 +126,6 @@ export EDITOR='nvim'
 # Nvm (Node version manager)
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
-[ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
 export GRADLE_JAVA_HOME="$(/usr/libexec/java_home -v 17)"

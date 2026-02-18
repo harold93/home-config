@@ -5,8 +5,6 @@
 lazygit/state.yml
 node_modules/
 **/node_modules/
-src/dot-local/share/
-src/dot-local/state/
 src/dot-config/iterm2/
 src/dot-config/jgit/
 src/dot-config/github-copilot
@@ -15,7 +13,10 @@ src/dot-config/flutter/
 src/dot-config/htop/
 src/dot-config/nvm/
 src/dot-config/yarn/
+src/dot-config/goose/
 src/dot-config/configstore/
+src/dot-local/share/
+src/dot-local/state/
 src/dot-local/bin/psrecord
 src/dot-local/pipx/
 src/dot-local/bin/git-filter-repo

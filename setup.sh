@@ -107,3 +107,4 @@ helm plugin install https://github.com/databus23/helm-diff --verify=false
 # TODO: toolbox jetbrains ? curl toolbox app and run it 
 # TODO: android studio
 # TODO: flutter, fvm
+# TODO: claude code ? curl -fsSL https://claude.ai/install.sh | bash

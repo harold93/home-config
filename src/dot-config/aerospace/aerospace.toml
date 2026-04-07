@@ -52,9 +52,6 @@ exec-on-workspace-change = [
     3)
       open -a 'Google Gemini'
       ;;
-    4)
-      open -a 'ChatGPT'
-      ;;
     S)
       open -a 'Slack'
       ;;
@@ -237,10 +234,6 @@ exec-on-workspace-change = [
 [[on-window-detected]]
     if.app-id = 'com.google.Chrome.app.lbneikkiodgjddaaeedphegfkehhpnjg'
     run = ['move-node-to-workspace 3']
-
-[[on-window-detected]]
-    if.app-id = 'com.openai.chat'
-    run = ['move-node-to-workspace 4']
 
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'

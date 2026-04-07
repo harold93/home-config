@@ -36,6 +36,8 @@ brew "docker-compose"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# GNU multiple precision arithmetic library
+brew "gmp"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Library for command-line editing
@@ -136,6 +138,8 @@ cask "android-studio"
 cask "arc"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Web browser with integrated AI assistant
 cask "comet"
 # Voice and text chat software

@@ -47,12 +47,9 @@ exec-on-workspace-change = [
       open -a 'Arc'
       ;;
     2)
-      open -a 'Comet'
-      ;;
-    3)
       open -a 'Google Gemini'
       ;;
-    S)
+    3)
       open -a 'Slack'
       ;;
     R)
@@ -228,16 +225,12 @@ exec-on-workspace-change = [
     run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
-    if.app-id = 'ai.perplexity.comet'
+    if.app-id = 'com.google.Chrome.app.lbneikkiodgjddaaeedphegfkehhpnjg'
     run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
-    if.app-id = 'com.google.Chrome.app.lbneikkiodgjddaaeedphegfkehhpnjg'
-    run = ['move-node-to-workspace 3']
-
-[[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'
-    run = ['move-node-to-workspace S']
+    run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
     if.app-id = 'com.jetbrains.rubymine'
@@ -263,13 +256,13 @@ exec-on-workspace-change = [
     if.app-id = 'com.spotify.client'
     run = ['move-node-to-workspace M']
 
-[workspace-to-monitor-force-assignment]
-    S = 'secondary' # Non-main monitor in case when there are only two monitors
-    R = 'secondary' # Non-main monitor in case when there are only two monitors
-    D = 'secondary' # Non-main monitor in case when there are only two monitors
-    E = 'secondary' # Non-main monitor in case when there are only two monitors
-    8 = 'secondary' # Non-main monitor in case when there are only two monitors
-    9 = 'secondary' # Non-main monitor in case when there are only two monitors
+# [workspace-to-monitor-force-assignment]
+#     S = 'secondary' # Non-main monitor in case when there are only two monitors
+#     R = 'secondary' # Non-main monitor in case when there are only two monitors
+#     D = 'secondary' # Non-main monitor in case when there are only two monitors
+#     E = 'secondary' # Non-main monitor in case when there are only two monitors
+#     8 = 'secondary' # Non-main monitor in case when there are only two monitors
+#     9 = 'secondary' # Non-main monitor in case when there are only two monitors
 
 
 ## Other bindings

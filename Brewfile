@@ -140,8 +140,6 @@ cask "arc"
 cask "chatgpt"
 # Terminal-based AI coding assistant
 cask "claude-code"
-# OpenAI's coding agent that runs in your terminal
-cask "codex"
 # Web browser with integrated AI assistant
 cask "comet"
 # Voice and text chat software

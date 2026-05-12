@@ -167,6 +167,8 @@ cask "slack"
 cask "spotify"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin@17"
+# Web browser
+cask "thebrowsercompany-dia"
 # Open-source code editor
 cask "visual-studio-code"
 # Native desktop client for WhatsApp
@@ -192,7 +194,6 @@ vscode "felixangelov.bloc"
 vscode "figma.figma-vscode-extension"
 vscode "formulahendry.auto-rename-tag"
 vscode "get-snippets.get-snippets"
-vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "hridoy.rails-snippets"
 vscode "ibm.output-colorizer"

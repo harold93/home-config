@@ -44,7 +44,7 @@ exec-on-workspace-change = [
   """
   case \"$AEROSPACE_FOCUSED_WORKSPACE\" in
     1)
-      open -a 'Arc'
+      open -a 'Dia'
       ;;
     2)
       open -a 'Google Gemini'
@@ -221,7 +221,7 @@ exec-on-workspace-change = [
     alt-shift-semicolon = 'mode service'
 
 [[on-window-detected]]
-    if.app-id = 'company.thebrowser.Browser'
+    if.app-id = 'company.thebrowser.dia'
     run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
